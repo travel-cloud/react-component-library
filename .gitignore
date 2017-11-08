@@ -10,6 +10,7 @@ npm-debug.log*
 
 # Compiled
 build/
+.out/
 
 # Dependency directories
 node_modules/
