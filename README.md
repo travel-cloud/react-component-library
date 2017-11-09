@@ -49,6 +49,8 @@ and also how they are going to work. This makes it easier for visual testing as 
 don't have to pull the component into a project and rebuild. It's also a great way to get some
 inspiration for a page/module or to locate a component you may need.
 
+See https://storybook.js.org/
+
 Storybook also provides snapshot testing via Jest ensuring stability.
 
 ## Components
