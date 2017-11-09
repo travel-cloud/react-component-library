@@ -1,6 +1,6 @@
 {
   "name": "@travel-cloud/react-component-library",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "React UI component library",
   "main": "build/index.js",
   "scripts": {
@@ -9,8 +9,7 @@
     "build-storybook": "build-storybook -c .storybook -o .out",
     "build": "babel lib -d build",
     "lint": "eslint . --ext .js,.jsx --fix",
-    "eslint-install": "(export PKG=eslint-config-airbnb; npm info \"$PKG@latest\" peerDependencies --json | command sed 's/[\\{\\},]//g ; s/: /@/g' | xargs npm install --save-dev \"$PKG@latest\")",
-    "postinstall": "npm run build"
+    "eslint-install": "(export PKG=eslint-config-airbnb; npm info \"$PKG@latest\" peerDependencies --json | command sed 's/[\\{\\},]//g ; s/: /@/g' | xargs npm install --save-dev \"$PKG@latest\")"
   },
   "license": "Apache-2.0",
   "author": "travel-cloud",
@@ -41,8 +40,8 @@
     "babel-preset-react": "^6.24.1"
   },
   "repository": {
-  "type": "git",
-  "url": "git+https://github.com/travel-cloud/react-component-library.git"
+    "type": "git",
+    "url": "git+https://github.com/travel-cloud/react-component-library.git"
   },
   "keywords": [
     "react",
