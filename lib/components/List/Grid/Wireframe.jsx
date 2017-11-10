@@ -3,7 +3,8 @@ import React from 'react';
 const rowCount = 10;
 const columnCount = 5;
 
-const GridWireframe = () => (
+const GridWireframe = () => [
+  <div className="wireframe-button" />,
   <ul className="list-group wireframe-container">
     {
       [...Array(rowCount)].map((column, index) => (
@@ -25,7 +26,7 @@ const GridWireframe = () => (
           }
         </li>))
     }
-  </ul>
-);
+  </ul>,
+];
 
 export default GridWireframe;
