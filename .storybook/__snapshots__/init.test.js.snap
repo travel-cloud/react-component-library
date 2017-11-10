@@ -201,8 +201,9 @@ exports[`Storyshots Buttons Documentation 1`] = `
 
 exports[`Storyshots Buttons Standard button 1`] = `
 <button
-  className="btn"
+  className="btn "
   onClick={[Function]}
+  type="button"
 >
   Click Me
 </button>
@@ -437,9 +438,41 @@ exports[`Storyshots Forms Input 1`] = `
   <input
     className="form-control"
     id="includes"
-    onChange={[Function]}
+    onChange={null}
     type="text"
   />
+</div>
+`;
+
+exports[`Storyshots Forms Select 1`] = `
+<div
+  className="form-group"
+>
+  <label
+    htmlFor="test-field"
+  >
+    Test field
+  </label>
+  <select
+    className="form-control"
+    id="test-field"
+    onChange={null}
+  >
+    <option
+      selected={true}
+      value=""
+    />
+    <option
+      value="TEST_WITHOUT VALUE"
+    >
+      Test without value
+    </option>
+    <option
+      value="value test"
+    >
+      Test with value
+    </option>
+  </select>
 </div>
 `;
 
@@ -644,7 +677,7 @@ exports[`Storyshots Lists Documentation 1`] = `
 
 exports[`Storyshots Lists Grid List 1`] = `
 <ul
-  className="list-group"
+  className="list-group "
 >
   <li
     className="pull-left"
@@ -654,20 +687,20 @@ exports[`Storyshots Lists Grid List 1`] = `
       style={
         Object {
           "marginBottom": "15px",
-          "width": "25%",
+          "width": "20%",
         }
       }
     >
       <span
         className="text-large"
       >
-        keyOne
+        Item one
       </span>
       <br />
       <span
         className="text-muted"
       >
-        Item one
+        keyOne
       </span>
     </p>
     <p
@@ -675,20 +708,20 @@ exports[`Storyshots Lists Grid List 1`] = `
       style={
         Object {
           "marginBottom": "15px",
-          "width": "25%",
+          "width": "20%",
         }
       }
     >
       <span
         className="text-large"
       >
-        keyThree
+        Item one y
       </span>
       <br />
       <span
         className="text-muted"
       >
-        Item one y
+        keyThree
       </span>
     </p>
   </li>
@@ -700,20 +733,20 @@ exports[`Storyshots Lists Grid List 1`] = `
       style={
         Object {
           "marginBottom": "15px",
-          "width": "25%",
+          "width": "20%",
         }
       }
     >
       <span
         className="text-large"
       >
-        keyOne
+        Item two
       </span>
       <br />
       <span
         className="text-muted"
       >
-        Item two
+        keyOne
       </span>
     </p>
     <p
@@ -721,20 +754,20 @@ exports[`Storyshots Lists Grid List 1`] = `
       style={
         Object {
           "marginBottom": "15px",
-          "width": "25%",
+          "width": "20%",
         }
       }
     >
       <span
         className="text-large"
       >
-        keyThree
+        Item two y
       </span>
       <br />
       <span
         className="text-muted"
       >
-        Item two y
+        keyThree
       </span>
     </p>
   </li>
@@ -742,910 +775,915 @@ exports[`Storyshots Lists Grid List 1`] = `
 `;
 
 exports[`Storyshots Lists Grid List Wireframe 1`] = `
-<ul
-  className="list-group wireframe-container"
->
-  <li
-    className="pull-left fade-in"
-    style={
-      Object {
-        "marginTop": "-10px",
-        "zIndex": 100,
-      }
-    }
+Array [
+  <div
+    className="wireframe-button"
+  />,
+  <ul
+    className="list-group wireframe-container"
   >
-    <div
-      className="pull-left"
+    <li
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
-          "marginBottom": "15px",
-          "width": "20%",
+          "marginTop": "-0px",
+          "zIndex": 100,
         }
       }
     >
       <div
-        className="wireframe"
-      />
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
       <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+    </li>
+    <li
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
-          "marginBottom": "15px",
-          "width": "20%",
+          "marginTop": "-20px",
+          "zIndex": 99,
         }
       }
     >
       <div
-        className="wireframe"
-      />
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
       <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+    </li>
+    <li
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
-          "marginBottom": "15px",
-          "width": "20%",
+          "marginTop": "-30px",
+          "zIndex": 98,
         }
       }
     >
       <div
-        className="wireframe"
-      />
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
       <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+    </li>
+    <li
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
-          "marginBottom": "15px",
-          "width": "20%",
+          "marginTop": "-40px",
+          "zIndex": 97,
         }
       }
     >
       <div
-        className="wireframe"
-      />
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
       <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+    </li>
+    <li
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
-          "marginBottom": "15px",
-          "width": "20%",
+          "marginTop": "-50px",
+          "zIndex": 96,
         }
       }
     >
       <div
-        className="wireframe"
-      />
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
       <div
-        className="wireframe w-small"
-      />
-    </div>
-  </li>
-  <li
-    className="pull-left fade-in"
-    style={
-      Object {
-        "marginTop": "-20px",
-        "zIndex": 99,
-      }
-    }
-  >
-    <div
-      className="pull-left"
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+    </li>
+    <li
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
-          "marginBottom": "15px",
-          "width": "20%",
+          "marginTop": "-60px",
+          "zIndex": 95,
         }
       }
     >
       <div
-        className="wireframe"
-      />
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
       <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+    </li>
+    <li
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
-          "marginBottom": "15px",
-          "width": "20%",
+          "marginTop": "-70px",
+          "zIndex": 94,
         }
       }
     >
       <div
-        className="wireframe"
-      />
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
       <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+    </li>
+    <li
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
-          "marginBottom": "15px",
-          "width": "20%",
+          "marginTop": "-80px",
+          "zIndex": 93,
         }
       }
     >
       <div
-        className="wireframe"
-      />
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
       <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+    </li>
+    <li
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
-          "marginBottom": "15px",
-          "width": "20%",
+          "marginTop": "-90px",
+          "zIndex": 92,
         }
       }
     >
       <div
-        className="wireframe"
-      />
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
       <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+      <div
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
+        }
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+    </li>
+    <li
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
-          "marginBottom": "15px",
-          "width": "20%",
+          "marginTop": "-100px",
+          "zIndex": 91,
         }
       }
     >
       <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-  </li>
-  <li
-    className="pull-left fade-in"
-    style={
-      Object {
-        "marginTop": "-30px",
-        "zIndex": 98,
-      }
-    }
-  >
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
         }
-      }
-    >
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
       <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
         }
-      }
-    >
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
       <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
         }
-      }
-    >
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
       <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
         }
-      }
-    >
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
       <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
+        className="pull-left"
+        style={
+          Object {
+            "marginBottom": "15px",
+            "width": "20%",
+          }
         }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-  </li>
-  <li
-    className="pull-left fade-in"
-    style={
-      Object {
-        "marginTop": "-40px",
-        "zIndex": 97,
-      }
-    }
-  >
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-  </li>
-  <li
-    className="pull-left fade-in"
-    style={
-      Object {
-        "marginTop": "-50px",
-        "zIndex": 96,
-      }
-    }
-  >
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-  </li>
-  <li
-    className="pull-left fade-in"
-    style={
-      Object {
-        "marginTop": "-60px",
-        "zIndex": 95,
-      }
-    }
-  >
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-  </li>
-  <li
-    className="pull-left fade-in"
-    style={
-      Object {
-        "marginTop": "-70px",
-        "zIndex": 94,
-      }
-    }
-  >
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-  </li>
-  <li
-    className="pull-left fade-in"
-    style={
-      Object {
-        "marginTop": "-80px",
-        "zIndex": 93,
-      }
-    }
-  >
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-  </li>
-  <li
-    className="pull-left fade-in"
-    style={
-      Object {
-        "marginTop": "-90px",
-        "zIndex": 92,
-      }
-    }
-  >
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-  </li>
-  <li
-    className="pull-left fade-in"
-    style={
-      Object {
-        "marginTop": "-100px",
-        "zIndex": 91,
-      }
-    }
-  >
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-    <div
-      className="pull-left"
-      style={
-        Object {
-          "marginBottom": "15px",
-          "width": "20%",
-        }
-      }
-    >
-      <div
-        className="wireframe"
-      />
-      <div
-        className="wireframe w-small"
-      />
-    </div>
-  </li>
-</ul>
+      >
+        <div
+          className="wireframe"
+        />
+        <div
+          className="wireframe w-small"
+        />
+      </div>
+    </li>
+  </ul>,
+]
 `;
 
 exports[`Storyshots Lists Simple List 1`] = `
@@ -1877,15 +1915,20 @@ Array [
 `;
 
 exports[`Storyshots Loaders Skeleton Loader 1`] = `
-Array [
+<div
+  className="wireframe-container"
+>
+  <div
+    className="wireframe-button"
+  />
   <ul
     className="list-group wireframe-container"
   >
     <li
-      className="pull-left fade-in"
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
-          "marginTop": "-10px",
+          "marginTop": "-0px",
           "zIndex": 100,
         }
       }
@@ -1972,7 +2015,7 @@ Array [
       </div>
     </li>
     <li
-      className="pull-left fade-in"
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
           "marginTop": "-20px",
@@ -2062,7 +2105,7 @@ Array [
       </div>
     </li>
     <li
-      className="pull-left fade-in"
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
           "marginTop": "-30px",
@@ -2152,7 +2195,7 @@ Array [
       </div>
     </li>
     <li
-      className="pull-left fade-in"
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
           "marginTop": "-40px",
@@ -2242,7 +2285,7 @@ Array [
       </div>
     </li>
     <li
-      className="pull-left fade-in"
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
           "marginTop": "-50px",
@@ -2332,7 +2375,7 @@ Array [
       </div>
     </li>
     <li
-      className="pull-left fade-in"
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
           "marginTop": "-60px",
@@ -2422,7 +2465,7 @@ Array [
       </div>
     </li>
     <li
-      className="pull-left fade-in"
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
           "marginTop": "-70px",
@@ -2512,7 +2555,7 @@ Array [
       </div>
     </li>
     <li
-      className="pull-left fade-in"
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
           "marginTop": "-80px",
@@ -2602,7 +2645,7 @@ Array [
       </div>
     </li>
     <li
-      className="pull-left fade-in"
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
           "marginTop": "-90px",
@@ -2692,7 +2735,7 @@ Array [
       </div>
     </li>
     <li
-      className="pull-left fade-in"
+      className="wireframe-li pull-left fade-in"
       style={
         Object {
           "marginTop": "-100px",
@@ -2781,10 +2824,225 @@ Array [
         />
       </div>
     </li>
-  </ul>,
-  <br />,
+  </ul>
   <div
-    className="loading-spinner"
-  />,
-]
+    className="loading-spinner wireframe-loader"
+  />
+</div>
+`;
+
+exports[`Storyshots Menus Documentation 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    Click the button at top-right to view the info
+  </div>
+  <a
+    onClick={[Function]}
+    role="button"
+    style={
+      Object {
+        "background": "#28c",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "textDecoration": "none",
+        "top": 0,
+      }
+    }
+    tabIndex="0"
+  >
+    Show Info
+  </a>
+  <div
+    style={
+      Object {
+        "background": "white",
+        "bottom": 0,
+        "display": "none",
+        "left": 0,
+        "overflow": "auto",
+        "padding": "0 40px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+        "zIndex": 99999,
+      }
+    }
+  >
+    <a
+      onClick={[Function]}
+      role="button"
+      style={
+        Object {
+          "background": "#28c",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "textDecoration": "none",
+          "top": 0,
+        }
+      }
+      tabIndex="0"
+    >
+      ×
+    </a>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginTop": "50px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "borderBottom": "1px solid #eee",
+              "marginBottom": 10,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <h1
+            style={
+              Object {
+                "fontSize": "35px",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            Menus
+          </h1>
+          <h2
+            style={
+              Object {
+                "fontSize": "22px",
+                "fontWeight": 400,
+                "margin": "0 0 10px 0",
+                "padding": 0,
+              }
+            }
+          >
+            Documentation
+          </h2>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <p
+            style={
+              Object {
+                "WebkitFontSmoothing": "antialiased",
+                "color": "#444",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+                "fontSize": "15px",
+              }
+            }
+          >
+            Generic HTML menus
+          </p>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Story Source
+          </h1>
+          <pre
+            style={
+              Object {
+                "backgroundColor": "#fafafa",
+                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+                "fontSize": ".88em",
+                "lineHeight": 1.5,
+                "overflowX": "scroll",
+                "padding": ".5rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                Click the button at top-right to view the info
+              </span>
+            </div>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Menus Sidebar 1`] = `
+<div
+  className="sidebar"
+>
+  <div
+    onClick={undefined}
+  >
+    Test one
+  </div>
+  <div
+    onClick={undefined}
+  >
+    Test two
+  </div>
+</div>
 `;
