@@ -2,9 +2,9 @@ import React from 'react';
 
 import GridWireframe from '../../List/Grid/Wireframe';
 
-const Skeleton = () => [
+const Skeleton = ({ button }) => [
   <div className="wireframe-container">
-    <GridWireframe />
+    <GridWireframe button={button} />
     <div className="loading-spinner wireframe-loader" />
   </div>,
 ];
