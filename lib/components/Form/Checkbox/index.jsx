@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /* eslint-disable */
-const Input = ({ fieldId, fieldName, onClick, checked, text }) => (
+const Checkbox = ({ fieldId, fieldName, onClick, checked, text }) => (
   <div className="form-group">
-    <label htmlFor={fieldId}>{fieldName}</label>
+    {fieldName && <label htmlFor={fieldId}>{fieldName}</label>}
     <input
       type="checkbox"
       id={fieldId}
@@ -18,18 +18,19 @@ const Input = ({ fieldId, fieldName, onClick, checked, text }) => (
 /* eslint-enable */
 
 // eslint-disable-next-line
-Input.propTypes = {
+Checkbox.propTypes = {
   fieldId: PropTypes.string.isRequired,
-  fieldName: PropTypes.string.isRequired,
+  fieldName: PropTypes.string,
   onClick: PropTypes.func,
   checked: PropTypes.bool,
   text: PropTypes.string.isRequired,
 };
 
 // eslint-disable-next-line
-Input.defaultProps = {
+Checkbox.defaultProps = {
   onClick: null,
   checked: false,
+  fieldName: '',
 };
 
-export default Input;
+export default Checkbox;
