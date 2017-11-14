@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /* eslint-disable */
-const Checkbox = ({fieldId, fieldName, onClick, checked, text}) => (
+const Checkbox = ({ fieldId, fieldName, onClick, checked, text }) => (
   <div className="form-group">
     {fieldName && <label htmlFor={fieldId}>{fieldName}</label>}
     <input
