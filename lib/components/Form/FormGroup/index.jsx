@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Checkbox from '../Checkbox';
 
 /* eslint-disable */
-const FormGroup = ({fieldId, fieldName, children}) => (
+const FormGroup = ({ fieldId, fieldName, children }) => (
   <div className="form-group">
     <label htmlFor={fieldId}>{fieldName}</label>
     {children}
