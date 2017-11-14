@@ -15,7 +15,8 @@ const Select = ({ name, options, onChange }) => {
         <option value="" selected />
         {
           options.map((option) => {
-            const formattedValue = option.value || option.text.toUpperCase().replace(' ', '_');
+            const formattedValue = option.value ||
+              option.text.toUpperCase().replace(' ', '_');
 
             return (
               <option key={formattedValue} value={formattedValue}>
