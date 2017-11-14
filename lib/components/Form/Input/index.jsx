@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /* eslint-disable */
-const Input = ({fieldId, fieldName, onChange}) => (
+const Input = ({ fieldId, fieldName, onChange }) => (
   <div className="form-group">
     <label htmlFor={fieldId}>{fieldName}</label>
     <input
