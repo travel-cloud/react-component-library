@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Select = ({ name, options, onChange }) => {
+const Select = ({name, options, onChange}) => {
   const formattedName = name.toLowerCase().replace(' ', '-');
 
   return (
@@ -15,7 +15,8 @@ const Select = ({ name, options, onChange }) => {
         <option value="" selected />
         {
           options.map((option) => {
-            const formattedValue = option.value || option.text.toUpperCase().replace(' ', '_');
+            const formattedValue = option.value ||
+              option.text.toUpperCase().replace(' ', '_');
 
             return (
               <option key={formattedValue} value={formattedValue}>
