@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Select = ({name, options, onChange}) => {
+const Select = ({ name, options, onChange }) => {
   const formattedName = name.toLowerCase().replace(' ', '-');
 
   return (
