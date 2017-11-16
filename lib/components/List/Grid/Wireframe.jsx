@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const rowCount = 10;
 const columnCount = 5;
 
-const GridWireframe = () => [
-  <div className="wireframe-button" />,
-  <ul className="list-group wireframe-container">
+const GridWireframe = ({ button }) => [
+  button && <div key="wireframeButton" className="wireframe-button" />,
+  <ul key="wireframeList" className="list-group wireframe-container">
     {
       [...Array(rowCount)].map((column, index) => (
         <li
@@ -28,5 +29,15 @@ const GridWireframe = () => [
     }
   </ul>,
 ];
+
+// eslint-disable-next-line
+GridWireframe.propTypes = {
+  button: PropTypes.bool,
+};
+
+// eslint-disable-next-line
+GridWireframe.defaultProps = {
+  button: true,
+};
 
 export default GridWireframe;
