@@ -1,21 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const rowCount = 10;
-const columnCount = 5;
-
-const GridWireframe = ({ button }) => [
+const Wireframe = ({ button, rows, columns }) => [
   button && <div key="wireframeButton" className="wireframe-button" />,
-  <ul key="wireframeList" className="list-group wireframe-container">
+  <ul key="wireframeList" className="list-group">
     {
-      [...Array(rowCount)].map((column, index) => (
+      [...Array(rows)].map((column, index) => (
         <li
           key={`li-grid-wireframe-${Math.random()}`}
           className="wireframe-li pull-left fade-in"
           style={{ marginTop: `-${index > 0 ? (index + 1) * 10 : 0}px`, zIndex: 100 - index }}
         >
           {
-            [...Array(columnCount)].map(() => (
+            [...Array(columns)].map(() => (
               <div
                 key={`div-grid-wireframe-${Math.random()}`}
                 className="pull-left"
@@ -31,13 +28,17 @@ const GridWireframe = ({ button }) => [
 ];
 
 // eslint-disable-next-line
-GridWireframe.propTypes = {
+Wireframe.propTypes = {
   button: PropTypes.bool,
+  rows: PropTypes.number,
+  columns: PropTypes.number,
 };
 
 // eslint-disable-next-line
-GridWireframe.defaultProps = {
+Wireframe.defaultProps = {
   button: true,
+  rows: 10,
+  columns: 5,
 };
 
-export default GridWireframe;
+export default Wireframe;
