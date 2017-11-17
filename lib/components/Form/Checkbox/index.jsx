@@ -21,7 +21,6 @@ const Checkbox = ({ fieldId, onClick, checked, text }) => (
 // eslint-disable-next-line
 Checkbox.propTypes = {
   fieldId: PropTypes.string.isRequired,
-  fieldName: PropTypes.string,
   onClick: PropTypes.func,
   checked: PropTypes.bool,
   text: PropTypes.string.isRequired,
