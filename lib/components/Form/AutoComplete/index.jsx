@@ -5,7 +5,7 @@ const AutoComplete = ({ items, onClick }) => (
   <ul className="autocomplete">
     {
       // eslint-disable-next-line
-      items.map(item => <li onClick={() => onClick(item)}>{`${item.firstname[0]} ${item.lastname[0]}`}</li>)
+      items.map(item => <li onClick={() => onClick(item)}>{item.text}</li>)
     }
   </ul>
 );
