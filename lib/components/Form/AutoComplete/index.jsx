@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const AutoComplete = ({ items, onClick }) => (
-  <ul>
+  <ul className="autocomplete">
     {
       // eslint-disable-next-line
-      items.map(item => <li onClick={onClick}>{item}</li>)
+      items.map(item => <li onClick={() => onClick(item)}>{item.text}</li>)
     }
   </ul>
 );
