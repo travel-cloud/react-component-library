@@ -1,4 +1,4 @@
-# react-component-library
+# react-component-library &middot; [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/travel-cloud/react-component-library/blob/master/LICENSE.md)
 
 * [Description](#description)
 * [Usage](#usage)
