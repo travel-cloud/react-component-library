@@ -1,5 +1,6 @@
 # Changelog
-All **notable** changes to this project will be documented in this file.
+All **notable** changes to this project will be documented in this file, including but
+limited to: Bug fixes, new components and prop changes.
 
 ## [Unreleased]
 <details>
