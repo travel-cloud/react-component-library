@@ -131,6 +131,48 @@ additional information below the input.
       fieldName: PropTypes.string.isRequired,
     };
 
+#### `<UIForm.FormGroup />`
+
+    FormGroup.propTypes = {
+      fieldId: PropTypes.string.isRequired,
+      fieldName: PropTypes.string.isRequired,
+      children: PropTypes.objectOf(PropTypes.any).isRequired,
+    };
+
+#### `<UIForm.Checkbox />`
+
+    Checkbox.propTypes = {
+      fieldId: PropTypes.string.isRequired,
+      onClick: PropTypes.func,
+      checked: PropTypes.bool,
+      text: PropTypes.string.isRequired,
+    };
+    
+    Checkbox.defaultProps = {
+      onClick: null,
+      checked: false,
+    };
+
+#### `<UIForm.Select />`
+
+    Select.propTypes = {
+      fieldId: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      options: PropTypes.arrayOf(PropTypes.shape({
+        value: PropTypes.string,
+        text: PropTypes.string,
+      })).isRequired,
+      onChange: PropTypes.func,
+      defaultValue: PropTypes.string,
+      required: PropTypes.bool,
+    };
+    
+    Select.defaultProps = {
+      onChange: null,
+      defaultValue: '',
+      required: false,
+    };
+    
 #### `<UIList.Simple />`
 
 Standard list, just includes rows.
