@@ -1,6 +1,6 @@
 {
   "name": "@travel-cloud/react-component-library",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "description": "React UI component library",
   "main": "build/index.js",
   "scripts": {
@@ -13,7 +13,9 @@
   },
   "license": "Apache-2.0",
   "author": "travel-cloud",
-  "dependencies": {},
+  "dependencies": {
+    "flat": "^4.0.0"
+  },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.13",
     "@storybook/addon-info": "^3.2.13",
@@ -37,8 +39,7 @@
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "flat": "^4.0.0"
+    "babel-preset-react": "^6.24.1"
   },
   "repository": {
     "type": "git",
