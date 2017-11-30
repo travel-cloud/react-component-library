@@ -8,6 +8,10 @@ limited to: Bug fixes, new components and prop changes.
     Changes that have landed in master but have not been released to NPM.
     Click to see more.
   </summary>
+  
+### Bugs
+
+* Fixed lint script hanging (Fixed in [#27](https://github.com/travel-cloud/react-component-library/pull/27))
 
 ### Components
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/* eslint-disable */
 const DisabledInput = ({ fieldId, fieldName }) => (
   <div className="form-group">
     <label htmlFor={fieldId}>{fieldName}</label>
@@ -13,7 +12,6 @@ const DisabledInput = ({ fieldId, fieldName }) => (
     />
   </div>
 );
-/* eslint-enable */
 
 // eslint-disable-next-line
 DisabledInput.propTypes = {
