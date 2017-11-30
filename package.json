@@ -1,6 +1,6 @@
 {
   "name": "@travel-cloud/react-component-library",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "description": "React UI component library",
   "main": "build/index.js",
   "scripts": {
