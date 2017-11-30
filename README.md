@@ -68,6 +68,8 @@ Storybook also provides snapshot testing via Jest ensuring stability.
 * [Loaders](#loaders)
   + [`<UILoader.Simple />`](#uiloaderskeleton-)
   + [`<UILoader.Skeleton />`](#uiloaderskeleton-)
+* [Messages](#messages)
+  + [`<UIMessages />`](#uimessages-)
 
 #### `<UIComponent />`
 
