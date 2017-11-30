@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Select = ({ fieldId, name, options, onChange, defaultValue, required  }) => {
+const Select = ({ fieldId, name, options, onChange, defaultValue, required }) => {
   return (
     <div className="form-group">
       <label htmlFor={fieldId}>{name}</label>
@@ -14,7 +14,8 @@ const Select = ({ fieldId, name, options, onChange, defaultValue, required  }) =
       >
         {
           options.map((option) => {
-            const formattedValue = option.value ||
+            const formattedValue = option.value === '' || option.value ?
+              option.value :
               option.text.toUpperCase().replace(/\s/g, '_');
 
             return (
