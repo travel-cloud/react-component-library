@@ -55,6 +55,8 @@ Storybook also provides snapshot testing via Jest ensuring stability.
 
 ## Components
 
+* [Component](#component)
+  + [`<UIComponent />`](#uicomponent-)
 * [Buttons](#buttons)
   + [`<UIButton />`](#uibutton-)
 * [Forms](#forms)
@@ -67,20 +69,57 @@ Storybook also provides snapshot testing via Jest ensuring stability.
   + [`<UILoader.Simple />`](#uiloaderskeleton-)
   + [`<UILoader.Skeleton />`](#uiloaderskeleton-)
 
+#### `<UIComponent />`
+
+Component is a wrapper for all your react-component-library modules.
+It uses React.Fragment to minimise redundant markup.
+
+    Component.propTypes = {
+      children: PropTypes.oneOfType([
+        PropTypes.objectOf(PropTypes.any),
+        PropTypes.arrayOf(PropTypes.any),
+      ]).isRequired,
+    };
+    
 #### `<UIButton />`
+
+Standard HTML Button, this is primarily for internal library use as abstracting single elements
+can be confusing.
 
     Button.propTypes = {
       label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
       classes: PropTypes.string,
-      onClick: PropTypes.func.isRequired,
+      type: PropTypes.string,
+      onClick: PropTypes.func,
+    };
+    
+    Button.defaultProps = {
+      classes: '',
+      type: 'button',
+      onClick: null,
     };
 
 #### `<UIForm.Input />`
 
+Standard HTML Input element with a label tag and the option to include 
+additional information below the input.  
+
     Input.propTypes = {
       fieldId: PropTypes.string.isRequired,
       fieldName: PropTypes.string.isRequired,
-      onChangeFunction: PropTypes.func,
+      onChange: PropTypes.func,
+      helpText: PropTypes.string,
+      value: PropTypes.string,
+      autoComplete: PropTypes.string,
+      required: PropTypes.bool,
+    };
+    
+    Input.defaultProps = {
+      onChange: null,
+      helpText: null,
+      value: null,
+      autoComplete: 'on',
+      required: false,
     };
 
 #### `<UIForm.DisabledInput />`
@@ -92,18 +131,69 @@ Storybook also provides snapshot testing via Jest ensuring stability.
 
 #### `<UIList.Simple />`
 
+Standard list, just includes rows.
+
     Simple.propTypes = {
       items: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object])).isRequired,
     };
 
 #### `<UIList.Grid />`
 
+Grid based list, includes both columns and rows. You can pass any data to it
+and selectively render items based on keys provided in the keyMap.
+
+##### Usage
+
+    <UIList.Grid
+      items={dataArray}
+      keyMap={[
+        { key: 'name', text: 'Contact Name' },
+        { key: 'email', text: 'Email Address' },
+      ]}
+    />
+
     Grid.propTypes = {
       classes: PropTypes.string,
-      items: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object])).isRequired,
-      keyMap: PropTypes.arrayOf(PropTypes.string).isRequired,
+      items: PropTypes.arrayOf(PropTypes.shape({
+        onClick: PropTypes.func,
+        key: PropTypes.string,
+        text: PropTypes.string,
+      })).isRequired,
+      keyMap: PropTypes.arrayOf(PropTypes.object),
+    };
+    
+    Grid.defaultProps = {
+      classes: '',
+      keyMap: [],
     };
 
 #### `<UILoader.Simple />`
 
+Simple full page loader
+
 #### `<UILoader.Skeleton />`
+
+Full page loader with a skeleton wireframe based on UIList.Grid. Button is optional.
+
+    Wireframe.propTypes = {
+      button: PropTypes.bool,
+      rows: PropTypes.number,
+      columns: PropTypes.number,
+    };
+    
+    Wireframe.defaultProps = {
+      button: true,
+      rows: 10,
+      columns: 5,
+    };
+
+#### `<UIMessages />`
+
+In page notifications
+
+    Messages.propTypes = {
+      messages: PropTypes.arrayOf(PropTypes.shape({
+        type: PropTypes.string,
+        text: PropTypes.string,
+      }).isRequired).isRequired,
+    };
