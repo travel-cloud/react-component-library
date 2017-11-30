@@ -1,27 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import flatten from 'flat';
 
-const renderListColumns = ({ keyMap, item }) => keyMap.map(column => (
-  <p
-    key={Math.random()}
-    className="pull-left"
-    style={{ width: '20%', marginBottom: '15px' }}
-  >
-    {
+const renderListColumns = ({ keyMap, item }) => {
+  const flattenedItem = flatten(item);
+
+  return keyMap.map(column => (
+    <p
+      key={Math.random()}
+      className="pull-left"
+      style={{ width: '20%', marginBottom: '15px' }}
+    >
+      {
       column.onClick ?
         // eslint-disable-next-line
         <span
-          onClick={() => column.onClick(item[column.key])}
+          onClick={() => column.onClick(flattenedItem[column.key])}
           className="text-large link"
         >
-          {item[column.key]}
+          {flattenedItem[column.key]}
         </span> :
-        <span className="text-large">{item[column.key]}</span>
+        <span className="text-large">{flattenedItem[column.key]}</span>
     }
-    <br />
-    <span className="text-muted">{column.text || column.key}</span>
-  </p>
-));
+      <br />
+      <span className="text-muted">{column.text || column.key}</span>
+    </p>));
+};
 
 const Grid = ({ classes, items, keyMap }) => (
   <ul className={`list-group ${classes}`}>
