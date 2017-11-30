@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Select = ({ fieldId, name, options, onChange, defaultValue  }) => {
+const Select = ({ fieldId, name, options, onChange, defaultValue, required  }) => {
   return (
     <div className="form-group">
       <label htmlFor={fieldId}>{name}</label>
@@ -10,6 +10,7 @@ const Select = ({ fieldId, name, options, onChange, defaultValue  }) => {
         className="form-control"
         onChange={onChange}
         defaultValue={defaultValue}
+        required={required}
       >
         {
           options.map((option) => {
@@ -38,12 +39,14 @@ Select.propTypes = {
   })).isRequired,
   onChange: PropTypes.func,
   defaultValue: PropTypes.string,
+  required: PropTypes.bool,
 };
 
 // eslint-disable-next-line
 Select.defaultProps = {
   onChange: null,
   defaultValue: '',
+  required: false,
 };
 
 export default Select;
