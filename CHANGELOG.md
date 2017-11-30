@@ -12,9 +12,6 @@ All **notable** changes to this project will be documented in this file.
 
 * Added `UIComponent` This is to wrap all UI modules and provide them with `Fragment` (Implemented in [#26](https://github.com/travel-cloud/react-component-library/pull/26))
 
-### Documentation
-
-
 </details>
 
 ## 0.1.21 (November 30th, 2017)
