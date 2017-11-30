@@ -76,110 +76,155 @@ Storybook also provides snapshot testing via Jest ensuring stability.
 Component is a wrapper for all your react-component-library modules.
 It uses React.Fragment to minimise redundant markup.
 
-    Component.propTypes = {
-      children: PropTypes.oneOfType([
-        PropTypes.objectOf(PropTypes.any),
-        PropTypes.arrayOf(PropTypes.any),
-      ]).isRequired,
-    };
+```jsx
+<UIComponent>
+  <span>Hello world</span>
+  <UIList.Wireframe button={false} rows={1} columns={5} />
+</UIComponent>
+
+Component.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.objectOf(PropTypes.any),
+    PropTypes.arrayOf(PropTypes.any),
+  ]).isRequired,
+};
+```
     
 #### `<UIButton />`
 
 Standard HTML Button, this is primarily for internal library use as abstracting single elements
 can be confusing.
 
-    Button.propTypes = {
-      label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-      classes: PropTypes.string,
-      type: PropTypes.string,
-      onClick: PropTypes.func,
-    };
-    
-    Button.defaultProps = {
-      classes: '',
-      type: 'button',
-      onClick: null,
-    };
+```jsx
+Button.propTypes = {
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  classes: PropTypes.string,
+  type: PropTypes.string,
+  onClick: PropTypes.func,
+};
+
+Button.defaultProps = {
+  classes: '',
+  type: 'button',
+  onClick: null,
+};
+```
 
 #### `<UIForm.Input />`
 
 Standard HTML Input element with a label tag and the option to include 
 additional information below the input.  
 
-    Input.propTypes = {
-      fieldId: PropTypes.string.isRequired,
-      fieldName: PropTypes.string.isRequired,
-      onChange: PropTypes.func,
-      helpText: PropTypes.string,
-      value: PropTypes.string,
-      autoComplete: PropTypes.string,
-      required: PropTypes.bool,
-    };
-    
-    Input.defaultProps = {
-      onChange: null,
-      helpText: null,
-      value: null,
-      autoComplete: 'on',
-      required: false,
-    };
+```jsx
+<UIForm.Input
+  fieldName="Contact Name"
+  fieldId="contactName"
+  required
+/>
+          
+Input.propTypes = {
+  fieldId: PropTypes.string.isRequired,
+  fieldName: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
+  helpText: PropTypes.string,
+  value: PropTypes.string,
+  autoComplete: PropTypes.string,
+  required: PropTypes.bool,
+};
+
+Input.defaultProps = {
+  onChange: null,
+  helpText: null,
+  value: null,
+  autoComplete: 'on',
+  required: false,
+};
+```
 
 #### `<UIForm.DisabledInput />`
 
-    DisabledInput.propTypes = {
-      fieldId: PropTypes.string.isRequired,
-      fieldName: PropTypes.string.isRequired,
-    };
+```jsx
+DisabledInput.propTypes = {
+  fieldId: PropTypes.string.isRequired,
+  fieldName: PropTypes.string.isRequired,
+};
+```
 
 #### `<UIForm.FormGroup />`
 
-    FormGroup.propTypes = {
-      fieldId: PropTypes.string.isRequired,
-      fieldName: PropTypes.string.isRequired,
-      children: PropTypes.objectOf(PropTypes.any).isRequired,
-    };
+```jsx
+<UIForm.FormGroup fieldName="Form Group" fieldId="formGroup">
+  <UIForm.Checkbox fieldId="itemOne" text="Item One" onClick={onChangeCheckbox} />
+  <UIForm.Checkbox fieldId="itemTwo" text="Item Two" onClick={onChangeCheckbox} />
+</UIForm.FormGroup>
+        
+FormGroup.propTypes = {
+  fieldId: PropTypes.string.isRequired,
+  fieldName: PropTypes.string.isRequired,
+  children: PropTypes.objectOf(PropTypes.any).isRequired,
+};
+```
 
 #### `<UIForm.Checkbox />`
 
-    Checkbox.propTypes = {
-      fieldId: PropTypes.string.isRequired,
-      onClick: PropTypes.func,
-      checked: PropTypes.bool,
-      text: PropTypes.string.isRequired,
-    };
-    
-    Checkbox.defaultProps = {
-      onClick: null,
-      checked: false,
-    };
+```jsx
+<UIForm.Checkbox fieldId="itemTwo" text="Item Two" onClick={onChangeCheckbox} />
+
+Checkbox.propTypes = {
+  fieldId: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  checked: PropTypes.bool,
+  text: PropTypes.string.isRequired,
+};
+
+Checkbox.defaultProps = {
+  onClick: null,
+  checked: false,
+};
+```
 
 #### `<UIForm.Select />`
+        
+```jsx
+<UIForm.Select
+  fieldId="selectNumber"
+  name="Select Number"
+  options={[
+    { text: '0' },
+    { text: '1' },
+    { text: '2' },
+  ]}
+  onChange={updateNumberData}
+/>
 
-    Select.propTypes = {
-      fieldId: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      options: PropTypes.arrayOf(PropTypes.shape({
-        value: PropTypes.string,
-        text: PropTypes.string,
-      })).isRequired,
-      onChange: PropTypes.func,
-      defaultValue: PropTypes.string,
-      required: PropTypes.bool,
-    };
-    
-    Select.defaultProps = {
-      onChange: null,
-      defaultValue: '',
-      required: false,
-    };
+Select.propTypes = {
+  fieldId: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.string,
+    text: PropTypes.string,
+  })).isRequired,
+  onChange: PropTypes.func,
+  defaultValue: PropTypes.string,
+  required: PropTypes.bool,
+};
+
+Select.defaultProps = {
+  onChange: null,
+  defaultValue: '',
+  required: false,
+};
+```
     
 #### `<UIList.Simple />`
 
 Standard list, just includes rows.
 
-    Simple.propTypes = {
-      items: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object])).isRequired,
-    };
+```jsx
+Simple.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object])).isRequired,
+};
+```
 
 #### `<UIList.Grid />`
 
@@ -188,28 +233,55 @@ and selectively render items based on keys provided in the keyMap.
 
 ##### Usage
 
-    <UIList.Grid
-      items={dataArray}
-      keyMap={[
-        { key: 'name', text: 'Contact Name' },
-        { key: 'email', text: 'Email Address' },
-      ]}
-    />
+```jsx
+<UIList.Grid
+  items={dataArray}
+  keyMap={[
+    { key: 'name', text: 'Contact Name' },
+    { key: 'email', text: 'Email Address' },
+  ]}
+/>
 
-    Grid.propTypes = {
-      classes: PropTypes.string,
-      items: PropTypes.arrayOf(PropTypes.shape({
-        onClick: PropTypes.func,
-        key: PropTypes.string,
-        text: PropTypes.string,
-      })).isRequired,
-      keyMap: PropTypes.arrayOf(PropTypes.object),
-    };
-    
-    Grid.defaultProps = {
-      classes: '',
-      keyMap: [],
-    };
+Grid.propTypes = {
+  classes: PropTypes.string,
+  items: PropTypes.arrayOf(PropTypes.shape({
+    onClick: PropTypes.func,
+    key: PropTypes.string,
+    text: PropTypes.string,
+  })).isRequired,
+  keyMap: PropTypes.arrayOf(PropTypes.object),
+};
+
+Grid.defaultProps = {
+  classes: '',
+  keyMap: [],
+};
+```
+
+#### 
+
+`<UIList.Wireframe />`
+
+Renders a single skeleton wireframe row, this can be used to improve perceived performance
+using conditional rendering to swap it out with real data as it becomes available.
+
+##### Usage
+
+```jsx
+<UIList.Wireframe button={false} rows={1} columns={5} />
+
+Wireframe.propTypes = {
+  button: PropTypes.bool,
+  rows: PropTypes.number,
+  columns: PropTypes.number,
+};
+
+Wireframe.defaultProps = {
+  button: true,
+  rows: 10,
+  columns: 5,
+};
+```
 
 #### `<UILoader.Simple />`
 
@@ -219,25 +291,33 @@ Simple full page loader
 
 Full page loader with a skeleton wireframe based on UIList.Grid. Button is optional.
 
-    Wireframe.propTypes = {
-      button: PropTypes.bool,
-      rows: PropTypes.number,
-      columns: PropTypes.number,
-    };
-    
-    Wireframe.defaultProps = {
-      button: true,
-      rows: 10,
-      columns: 5,
-    };
+```jsx
+<UILoader.Skeleton button={false} />
+
+Wireframe.propTypes = {
+  button: PropTypes.bool,
+  rows: PropTypes.number,
+  columns: PropTypes.number,
+};
+
+Wireframe.defaultProps = {
+  button: true,
+  rows: 10,
+  columns: 5,
+};
+```
 
 #### `<UIMessages />`
 
 In page notifications
 
-    Messages.propTypes = {
-      messages: PropTypes.arrayOf(PropTypes.shape({
-        type: PropTypes.string,
-        text: PropTypes.string,
-      }).isRequired).isRequired,
-    };
+```jsx
+<UIMessages messages={messages} />
+
+Messages.propTypes = {
+  messages: PropTypes.arrayOf(PropTypes.shape({
+    type: PropTypes.string,
+    text: PropTypes.string,
+  }).isRequired).isRequired,
+};
+```
