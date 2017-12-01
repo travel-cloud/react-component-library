@@ -65,11 +65,14 @@ Storybook also provides snapshot testing via Jest ensuring stability.
 * [Lists](#lists)
   + [`<UIList.Simple />`](#uilistsimple-)
   + [`<UIList.Grid />`](#uilistgrid-)
+  + [`<UIList.Wireframe />`](#uilistwireframe-)
 * [Loaders](#loaders)
   + [`<UILoader.Simple />`](#uiloaderskeleton-)
   + [`<UILoader.Skeleton />`](#uiloaderskeleton-)
 * [Messages](#messages)
   + [`<UIMessages />`](#uimessages-)
+* [Sidebar](#sidebar)
+  + [`<UISidebar />`](#uisidebar-)
 
 #### `<UIComponent />`
 
@@ -258,9 +261,7 @@ Grid.defaultProps = {
 };
 ```
 
-#### 
-
-`<UIList.Wireframe />`
+#### `<UIList.Wireframe />`
 
 Renders a single skeleton wireframe row, this can be used to improve perceived performance
 using conditional rendering to swap it out with real data as it becomes available.
@@ -319,5 +320,27 @@ Messages.propTypes = {
     type: PropTypes.string,
     text: PropTypes.string,
   }).isRequired).isRequired,
+};
+```
+
+#### `<UISidebar />`
+
+```jsx
+ <UISidebar>
+    <UILogo>
+        <span className="logo" />
+    </UILogo>
+    <UINav>
+        <li>
+          <a href="/">Home</a>
+        </li>
+    </UINav>
+</UISidebar>
+
+Sidebar.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.objectOf(PropTypes.any),
+    PropTypes.arrayOf(PropTypes.any),
+  ]).isRequired,
 };
 ```

@@ -9,6 +9,10 @@ limited to: Bug fixes, new components and prop changes.
     Click to see more.
   </summary>
   
+</details>
+
+## 0.2.0 (December 1st, 2017)
+
 ### Bugs
 
 * Fixed lint script hanging (Fixed in [#27](https://github.com/travel-cloud/react-component-library/pull/27))
@@ -16,8 +20,7 @@ limited to: Bug fixes, new components and prop changes.
 ### Components
 
 * Added `UIComponent` This is to wrap all UI modules and provide them with `Fragment` (Implemented in [#26](https://github.com/travel-cloud/react-component-library/pull/26))
-
-</details>
+* Added `UISidebar` which contains the ability to add a nav and a logo (Implemented in [#28](https://github.com/travel-cloud/react-component-library/pull/28))
 
 ## 0.1.21 (November 30th, 2017)
 

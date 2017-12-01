@@ -4,7 +4,7 @@ import Messages from './lib/components/Messages';
 import * as Loader from './lib/components/Loader';
 import * as List from './lib/components/List';
 import * as Form from './lib/components/Form';
-import * as Menu from './lib/components/Menu';
+import Sidebar, { Nav, Logo } from './lib/components/Sidebar';
 
 const UIComponent = Component;
 const UIButton = Button;
@@ -12,7 +12,9 @@ const UIMessages = Messages;
 const UILoader = Loader;
 const UIList = List;
 const UIForm = Form;
-const UIMenu = Menu;
+const UISidebar = Sidebar;
+const UINav = Nav;
+const UILogo = Logo;
 
 export {
   UIComponent,
@@ -21,5 +23,7 @@ export {
   UILoader,
   UIList,
   UIForm,
-  UIMenu,
+  UISidebar,
+  UINav,
+  UILogo,
 };
