@@ -1,8 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/* eslint-disable */
-const Input = ({ fieldId, fieldName, onChange, helpText, value, autoComplete, required }) => (
+const Input = ({
+  fieldId,
+  fieldName,
+  onChange,
+  helpText,
+  value,
+  autoComplete,
+  required,
+}) => (
   <div className="form-group">
     <label htmlFor={fieldId}>{fieldName}</label>
     <input
@@ -17,7 +24,6 @@ const Input = ({ fieldId, fieldName, onChange, helpText, value, autoComplete, re
     { helpText && <span className="help-block">{helpText}</span> }
   </div>
 );
-/* eslint-enable */
 
 // eslint-disable-next-line
 Input.propTypes = {
