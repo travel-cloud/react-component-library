@@ -13,7 +13,7 @@ limited to: Bug fixes, new components and prop changes.
 
 ## 0.2.0 (December 1st, 2017)
 
-### Bugs
+### Fixes
 
 * Fixed lint script hanging (Fixed in [#27](https://github.com/travel-cloud/react-component-library/pull/27))
 
