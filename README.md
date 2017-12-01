@@ -1,4 +1,4 @@
-# react-component-library &middot; [![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/travel-cloud/react-component-library/blob/master/LICENSE.md) [![npm version](https://badge.fury.io/js/%40travel-cloud%2Freact-component-library.svg)](https://www.npmjs.com/package/@travel-cloud/react-component-library)
+# react-component-library &middot; [![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/travel-cloud/react-component-library/blob/master/LICENSE.md) [![npm version](https://badge.fury.io/js/%40travel-cloud%2Freact-component-library.svg)](https://badge.fury.io/js/%40travel-cloud%2Freact-component-library)
 
 * [Description](#description)
 * [Usage](#usage)
