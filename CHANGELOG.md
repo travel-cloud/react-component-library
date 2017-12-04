@@ -11,6 +11,16 @@ limited to: Bug fixes, new components and prop changes.
   
 </details>
 
+## 0.3.0 (December 4th, 2017)
+
+### Components
+
+* Added `UI` This is to wrap the entire application and supply it with default styles (Implemented in [#31](https://github.com/travel-cloud/react-component-library/pull/31))
+
+### Styling
+
+* Added default styles for all components(Implemented in [#31](https://github.com/travel-cloud/react-component-library/pull/31))
+
 ## 0.2.0 (December 1st, 2017)
 
 ### Fixes
