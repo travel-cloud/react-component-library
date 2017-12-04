@@ -1,3 +1,4 @@
+import UI from './lib/components/UI';
 import Component from './lib/components/Component';
 import Button from './lib/components/Button';
 import Messages from './lib/components/Messages';
@@ -17,6 +18,7 @@ const UINav = Nav;
 const UILogo = Logo;
 
 export {
+  UI,
   UIComponent,
   UIButton,
   UIMessages,

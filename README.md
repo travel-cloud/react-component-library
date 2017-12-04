@@ -1,5 +1,7 @@
 # react-component-library &middot; [![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/travel-cloud/react-component-library/blob/master/LICENSE.md) [![npm version](https://badge.fury.io/js/%40travel-cloud%2Freact-component-library.svg)](https://badge.fury.io/js/%40travel-cloud%2Freact-component-library)
 
+[View the components here](https://travel-cloud.github.io/react-component-library/)
+
 * [Description](#description)
 * [Usage](#usage)
 * [Storybook](#storybook)
@@ -26,6 +28,57 @@ To import into a file do the following (all components are prefixed with UI)
     import { UIButton } from 'react-component-library';
 
 You would then use it like you would a local project component.
+    
+#### Basic example
+
+The `<UI>` component wraps your UI application and activates the default styles seen [here](https://travel-cloud.github.io/react-component-library/).
+If you would like these not to be activated you can add `customStyles` as a prop like so: `<UI customStyles>`. UIComponent
+can be used to wrap blocks of UI elements, or standard JSX. It will also add padding to your elements to keep them evenly spaced.
+
+![example](example.png)
+
+The above was achieved with the following code:
+
+```jsx
+render() {
+  const data = [
+    {
+      team: 'Development',
+      name: 'John Smith',
+      email: 'john.smith@dev.com',
+    },
+  ];
+  return (
+    <UI>
+      <UISidebar>
+        <UILogo>
+          <i className="material-icons">account_balance</i> &nbsp;UI Library
+        </UILogo>
+        <UINav>
+          <a href="#">Documentation</a>
+          <a href="#">Github</a>
+          <a href="#">Contributing</a>
+        </UINav>
+      </UISidebar>
+      <UIComponent>
+        <h1>Documentation</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h2>Users</h2>
+        <UIList.Grid
+          items={data}
+          keyMap={[
+            { key: 'team' },
+            { key: 'name' },
+            { key: 'email' },
+          ]}
+        />
+      </UIComponent>
+    </UI>
+  );
+}
+```
 
 #### Commands
 
@@ -55,6 +108,8 @@ Storybook also provides snapshot testing via Jest ensuring stability.
 
 ## Components
 
+* [UI](#ui)
+  + [`<UI />`](#ui-)
 * [Component](#component)
   + [`<UIComponent />`](#uicomponent-)
 * [Buttons](#buttons)
@@ -74,10 +129,33 @@ Storybook also provides snapshot testing via Jest ensuring stability.
 * [Sidebar](#sidebar)
   + [`<UISidebar />`](#uisidebar-)
 
+#### `<UI />`
+
+UI wraps your entire UI application and provides it with default styles, use the prop `customStyles` to remove any default styling.
+
+```jsx
+<UI>
+  <UIComponent>
+    <p>Hello World</p>
+  </UIComponent>
+</UI>
+
+UI.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.objectOf(PropTypes.any),
+    PropTypes.arrayOf(PropTypes.any),
+  ]).isRequired,
+  customStyles: PropTypes.bool,
+};
+
+UI.defaultProps = {
+  customStyles: false,
+};
+```
+
 #### `<UIComponent />`
 
-Component is a wrapper for all your react-component-library modules.
-It uses React.Fragment to minimise redundant markup.
+Component is a wrapper for all your react-component-library modules and provides correct spacing.
 
 ```jsx
 <UIComponent>
@@ -328,12 +406,10 @@ Messages.propTypes = {
 ```jsx
  <UISidebar>
     <UILogo>
-        <span className="logo" />
+        Logo here
     </UILogo>
     <UINav>
-        <li>
-          <a href="/">Home</a>
-        </li>
+      <a href="/">Home</a>
     </UINav>
 </UISidebar>
 

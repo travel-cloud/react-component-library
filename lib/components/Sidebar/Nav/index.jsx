@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 
 const Nav = ({ children }) => (
   <nav>
-    <ul id="primary-aside-menu" className="aside-menu active-menu">
-      { children }
-    </ul>
+    { children }
   </nav>
 );
 

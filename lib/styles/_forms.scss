@@ -1,0 +1,21 @@
+input, select, textarea {
+  padding: 8px 12px;
+  border-radius: 2px;
+  border: 1px solid #eeeeee;
+  display: block;
+  background: white;
+  box-shadow: none;
+  font-size: 16px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.checkbox input {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}

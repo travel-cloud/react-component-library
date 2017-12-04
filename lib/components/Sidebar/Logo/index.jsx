@@ -2,10 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Logo = ({ children }) => (
-  <div className="aside-header clearfix">
-    <span className="brand-logo pull-left">
-      { children }
-    </span>
+  <div className="ui-logo">
+    { children }
   </div>
 );
 

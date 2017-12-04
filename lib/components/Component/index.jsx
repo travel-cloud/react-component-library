@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const Component = ({ children }) => (
-  <Fragment>
+  <div className="ui-component">
     {children}
-  </Fragment>
+  </div>
 );
 
 // eslint-disable-next-line
