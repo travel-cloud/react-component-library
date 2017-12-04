@@ -1,0 +1,36 @@
+.ui-sidebar {
+  background: $primary-color;
+  color: white;
+  .ui-sidebar-inner {
+    position: fixed;
+    background: $primary-color;
+    letter-spacing: 1.1px;
+    .ui-logo {
+      font-size: 18px;
+      padding: 20px;
+      font-weight: bold;
+      color: $secondary-color;
+      .material-icons {
+        margin-top: -4px;
+      }
+    }
+    nav {
+      padding: 20px;
+      a {
+        color: white;
+        display: inline;
+        width: 100%;
+        font-size: 13px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        float: left;
+        :first-child {
+          margin-right: 10px;
+        }
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}

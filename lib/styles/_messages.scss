@@ -1,0 +1,22 @@
+.alert {
+  padding: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  background: $primary-color;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  letter-spacing: 0.8px;
+  &.alert-success {
+    background: $success;
+  }
+  &.alert-error {
+    background: $error;
+  }
+  p {
+    margin: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

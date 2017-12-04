@@ -1,0 +1,22 @@
+.list-group {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+    &:first-child {
+      border-top: 1px dashed #e0e0e0;
+    }
+    width: 100%;
+    border-bottom: 1px dashed #e0e0e0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    .text-large {
+      font-size: 1.1rem;
+    }
+    .link {
+      color: #6bb3b7;
+      text-decoration: none;
+    }
+  }
+}

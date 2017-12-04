@@ -1,0 +1,181 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+.ui-styles-true {
+  font-family: 'Raleway', serif;
+  color: #343e4d;
+  font-size: 13px;
+  line-height: 22px; }
+  .ui-styles-true .ui-sidebar {
+    background: #343e4d;
+    color: white; }
+    .ui-styles-true .ui-sidebar .ui-sidebar-inner {
+      position: fixed;
+      background: #343e4d;
+      letter-spacing: 1.1px; }
+      .ui-styles-true .ui-sidebar .ui-sidebar-inner .ui-logo {
+        font-size: 18px;
+        padding: 20px;
+        font-weight: bold;
+        color: #f86871; }
+        .ui-styles-true .ui-sidebar .ui-sidebar-inner .ui-logo .material-icons {
+          margin-top: -4px; }
+      .ui-styles-true .ui-sidebar .ui-sidebar-inner nav {
+        padding: 20px; }
+        .ui-styles-true .ui-sidebar .ui-sidebar-inner nav a {
+          color: white;
+          display: inline;
+          width: 100%;
+          font-size: 13px;
+          margin-bottom: 10px;
+          text-decoration: none;
+          float: left; }
+          .ui-styles-true .ui-sidebar .ui-sidebar-inner nav a :first-child {
+            margin-right: 10px; }
+          .ui-styles-true .ui-sidebar .ui-sidebar-inner nav a:hover {
+            color: #f86871; }
+  .ui-styles-true button {
+    background: #f86871;
+    border: 0;
+    padding: 8px 12px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1.1px;
+    border-radius: 2px; }
+    .ui-styles-true button:hover {
+      background: #cf5c6f; }
+  .ui-styles-true .ui-component {
+    padding: 20px; }
+  .ui-styles-true input, .ui-styles-true select, .ui-styles-true textarea {
+    padding: 8px 12px;
+    border-radius: 2px;
+    border: 1px solid #eeeeee;
+    display: block;
+    background: white;
+    box-shadow: none;
+    font-size: 16px; }
+  .ui-styles-true label {
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 12px; }
+  .ui-styles-true .checkbox input {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; }
+  .ui-styles-true .alert {
+    padding: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    background: #343e4d;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    letter-spacing: 0.8px; }
+    .ui-styles-true .alert.alert-success {
+      background: #6fcc77; }
+    .ui-styles-true .alert.alert-error {
+      background: #e77275; }
+    .ui-styles-true .alert p {
+      margin: 0; }
+    .ui-styles-true .alert:last-child {
+      margin-bottom: 0; }
+  .ui-styles-true .loading-spinner,
+  .ui-styles-true .loading-spinner:after {
+    border-radius: 50%;
+    width: 7em;
+    height: 7em; }
+  .ui-styles-true .loading-spinner {
+    z-index: 999;
+    margin: 40px auto;
+    font-size: 7px;
+    position: relative;
+    text-indent: -9999em;
+    border: 0.4em solid gainsboro;
+    border-left-color: #f86871;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1s infinite linear;
+    animation: load8 1 infinite linear; }
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+  .ui-styles-true .list-group {
+    padding: 0;
+    margin: 0; }
+    .ui-styles-true .list-group li {
+      list-style: none;
+      width: 100%;
+      border-bottom: 1px dashed #e0e0e0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      position: relative; }
+      .ui-styles-true .list-group li:first-child {
+        border-top: 1px dashed #e0e0e0; }
+      .ui-styles-true .list-group li .text-large {
+        font-size: 1.1rem; }
+      .ui-styles-true .list-group li .link {
+        color: #6bb3b7;
+        text-decoration: none; }
+  .ui-styles-true .wireframe-container {
+    position: relative;
+    height: 100vh; }
+  .ui-styles-true .wireframe-li {
+    background: white; }
+  .ui-styles-true .wireframe {
+    background: #ededed;
+    width: 55%;
+    height: 14px;
+    margin-bottom: 11px;
+    margin-top: 4px; }
+  .ui-styles-true .w-small {
+    background: #f5f5f5;
+    width: 35%;
+    height: 11px;
+    margin-bottom: 2px; }
+  .ui-styles-true .wireframe-animate {
+    margin-top: 0px;
+    opacity: 1; }
+
+@keyframes fadeIn {
+  to {
+    margin-top: 0px; } }
+  .ui-styles-true .fade-in {
+    animation: fadeIn 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.0s; }
+  .ui-styles-true .wireframe-wrapper {
+    background: white; }
+  .ui-styles-true .wireframe-button {
+    margin-bottom: 20px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    width: 131px;
+    height: 36px; }
+  .ui-styles-true .text-center {
+    text-align: center; }
+  .ui-styles-true h1 {
+    color: #343e4d; }
+  .ui-styles-true h1, .ui-styles-true h2, .ui-styles-true h3, .ui-styles-true h4, .ui-styles-true h5 {
+    margin: 0; }
+  .ui-styles-true h1 {
+    margin-bottom: 40px; }
+  .ui-styles-true h2 {
+    margin: 20px 0;
+    line-height: 18px; }
+  .ui-styles-true .material-icons {
+    vertical-align: middle; }
+  .ui-styles-true .pull-left {
+    float: left; }

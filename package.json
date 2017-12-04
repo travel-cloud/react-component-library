@@ -7,9 +7,11 @@
     "test": "jest --env=jsdom",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -c .storybook -o .out",
-    "build": "babel lib -d build",
+    "build": "babel lib -d build --copy-files",
     "lint": "eslint . --ext .js,.jsx --fix",
-    "eslint-install": "(export PKG=eslint-config-airbnb; npm info \"$PKG@latest\" peerDependencies --json | command sed 's/[\\{\\},]//g ; s/: /@/g' | xargs npm install --save-dev \"$PKG@latest\")"
+    "eslint-install": "(export PKG=eslint-config-airbnb; npm info \"$PKG@latest\" peerDependencies --json | command sed 's/[\\{\\},]//g ; s/: /@/g' | xargs npm install --save-dev \"$PKG@latest\")",
+    "watch-css": "npm run build-css && node-sass-chokidar lib/styles -o lib/components/UI --watch --recursive",
+    "build-css": "node-sass-chokidar lib/styles -o lib/components/UI"
   },
   "license": "Apache-2.0",
   "author": "travel-cloud",
@@ -23,6 +25,11 @@
     "@storybook/addon-links": "^3.2.13",
     "@storybook/addon-storyshots": "^3.2.13",
     "@storybook/react": "^3.2.13",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-immutable": "^1.0.0",
@@ -34,12 +41,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-storybook-addon-props-combinations": "^1.0.1",
-    "react-test-renderer": "^16.0.0",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^7.2.3",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1"
+    "react-test-renderer": "^16.2.0",
+    "node-sass-chokidar": "0.0.3"
   },
   "repository": {
     "type": "git",
