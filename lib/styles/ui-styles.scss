@@ -19,12 +19,7 @@
   }
   h1 {
     color: $primary-color;
-  }
-  h1, h2, h3, h4, h5 {
-    margin: 0;
-  }
-  h1 {
-    margin-bottom: 40px;
+    margin: 0 0 40px 0;
   }
   h2 {
     margin: 20px 0;
@@ -35,5 +30,11 @@
   }
   .pull-left {
     float: left;
+  }
+  .link {
+    cursor: pointer;
+  }
+  .text-muted {
+    color: #aaaaaa;
   }
 }
