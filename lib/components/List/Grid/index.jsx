@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import flatten from 'flat';
+import Wireframe from './Wireframe';
 
 const renderListColumns = ({ keyMap, item }) => {
   const flattenedItem = flatten(item);
@@ -27,17 +28,23 @@ const renderListColumns = ({ keyMap, item }) => {
     </p>));
 };
 
-const Grid = ({ classes, items, keyMap }) => (
-  <ul className={`list-group ${classes}`}>
-    {
-      items.map(item => (
-        <li className="pull-left" key={item[keyMap[0].key]}>
-          { renderListColumns({ keyMap, item }) }
-        </li>
-      ))
-    }
-  </ul>
-);
+const Grid = ({
+  classes,
+  items,
+  keyMap,
+  withLoader,
+}) => [
+  items.length > 0 || !withLoader ?
+    <ul className={`ui-grid list-group ${classes}`}>
+      {
+        items.map(item => (
+          <li className="pull-left" key={item[keyMap[0].key]}>
+            { renderListColumns({ keyMap, item }) }
+          </li>
+        ))
+      }
+    </ul> : <Wireframe loader button={false} rows={3} columns={5} />,
+];
 
 // eslint-disable-next-line
 Grid.propTypes = {
@@ -48,12 +55,14 @@ Grid.propTypes = {
     text: PropTypes.string,
   })).isRequired,
   keyMap: PropTypes.arrayOf(PropTypes.object),
+  withLoader: PropTypes.bool,
 };
 
 // eslint-disable-next-line
 Grid.defaultProps = {
   classes: '',
   keyMap: [],
+  withLoader: false,
 };
 
 export default Grid;

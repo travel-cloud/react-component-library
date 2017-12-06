@@ -14,13 +14,13 @@
       letter-spacing: 1.1px; }
       .ui-styles-true .ui-sidebar .ui-sidebar-inner .ui-logo {
         font-size: 18px;
-        padding: 20px;
+        padding: 30px 30px 10px;
         font-weight: bold;
         color: #f86871; }
         .ui-styles-true .ui-sidebar .ui-sidebar-inner .ui-logo .material-icons {
           margin-top: -4px; }
       .ui-styles-true .ui-sidebar .ui-sidebar-inner nav {
-        padding: 20px; }
+        padding: 30px; }
         .ui-styles-true .ui-sidebar .ui-sidebar-inner nav a {
           color: white;
           display: inline;
@@ -44,7 +44,7 @@
     .ui-styles-true button:hover {
       background: #cf5c6f; }
   .ui-styles-true .ui-component {
-    padding: 20px; }
+    padding: 30px; }
   .ui-styles-true input, .ui-styles-true select, .ui-styles-true textarea {
     padding: 8px 12px;
     border-radius: 2px;
@@ -85,17 +85,18 @@
     height: 7em; }
   .ui-styles-true .loading-spinner {
     z-index: 999;
-    margin: 40px auto;
     font-size: 7px;
-    position: relative;
+    position: absolute;
+    left: calc(50% - 30px);
+    top: calc(50% - 30px);
     text-indent: -9999em;
     border: 0.4em solid gainsboro;
     border-left-color: #f86871;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
-    -webkit-animation: load8 1s infinite linear;
-    animation: load8 1 infinite linear; }
+    -webkit-animation: load8 0.8s infinite linear;
+    animation: load8 0.8 infinite linear; }
 
 @-webkit-keyframes load8 {
   0% {
@@ -114,7 +115,8 @@
     transform: rotate(360deg); } }
   .ui-styles-true .list-group {
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    position: relative; }
     .ui-styles-true .list-group li {
       list-style: none;
       width: 100%;
@@ -129,21 +131,32 @@
       .ui-styles-true .list-group li .link {
         color: #6bb3b7;
         text-decoration: none; }
+  .ui-styles-true .ui-grid {
+    display: inline-block;
+    width: 100%; }
   .ui-styles-true .wireframe-container {
     position: relative;
     height: 100vh; }
   .ui-styles-true .wireframe-li {
     background: white; }
+  .ui-styles-true .ui-wireframe {
+    position: relative;
+    float: left;
+    width: 100%; }
+    .ui-styles-true .ui-wireframe .list-group {
+      float: left;
+      width: 100%; }
   .ui-styles-true .wireframe {
     background: #ededed;
     width: 55%;
     height: 14px;
     margin-bottom: 11px;
-    margin-top: 4px; }
+    margin-top: 19px; }
   .ui-styles-true .w-small {
     background: #f5f5f5;
     width: 35%;
     height: 11px;
+    margin-top: 6px;
     margin-bottom: 2px; }
   .ui-styles-true .wireframe-animate {
     margin-top: 0px;
@@ -167,11 +180,8 @@
   .ui-styles-true .text-center {
     text-align: center; }
   .ui-styles-true h1 {
-    color: #343e4d; }
-  .ui-styles-true h1, .ui-styles-true h2, .ui-styles-true h3, .ui-styles-true h4, .ui-styles-true h5 {
-    margin: 0; }
-  .ui-styles-true h1 {
-    margin-bottom: 40px; }
+    color: #343e4d;
+    margin: 0 0 40px 0; }
   .ui-styles-true h2 {
     margin: 20px 0;
     line-height: 18px; }
@@ -179,3 +189,7 @@
     vertical-align: middle; }
   .ui-styles-true .pull-left {
     float: left; }
+  .ui-styles-true .link {
+    cursor: pointer; }
+  .ui-styles-true .text-muted {
+    color: #aaaaaa; }

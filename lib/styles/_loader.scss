@@ -6,17 +6,18 @@
 }
 .loading-spinner {
   z-index: 999;
-  margin: 40px auto;
   font-size: 7px;
-  position: relative;
+  position: absolute;
+  left: calc(50% - 30px);
+  top: calc(50% - 30px);
   text-indent: -9999em;
   border: 0.4em solid rgba(220, 220, 220, 1);
   border-left-color: $secondary-color;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-animation: load8 1s infinite linear;
-  animation: load8 1 infinite linear;
+  -webkit-animation: load8 0.8s infinite linear;
+  animation: load8 0.8 infinite linear;
 }
 @-webkit-keyframes load8 {
   0% {

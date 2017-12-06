@@ -7,8 +7,14 @@
   background: white;
 }
 
-.wireframe-loader {
-
+.ui-wireframe {
+  position: relative;
+  float: left;
+  width: 100%;
+  .list-group {
+    float: left;
+    width: 100%;
+  }
 }
 
 .wireframe {
@@ -16,13 +22,14 @@
   width: 55%;
   height: 14px;
   margin-bottom: 11px;
-  margin-top: 4px;
+  margin-top: 19px;
 }
 
 .w-small {
   background: #f5f5f5;
   width: 35%;
   height: 11px;
+  margin-top: 6px;
   margin-bottom: 2px;
 }
 
