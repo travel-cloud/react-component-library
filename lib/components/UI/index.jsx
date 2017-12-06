@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const UI = ({ children, customStyles }) => {
+  // eslint-disable-next-line
+  require('./base-styles.css');
   if (!customStyles) {
     // eslint-disable-next-line
     require('./ui-styles.css');
