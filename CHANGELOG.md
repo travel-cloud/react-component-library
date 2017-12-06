@@ -9,6 +9,14 @@ limited to: Bug fixes, new components and prop changes.
     Click to see more.
   </summary>
   
+  ### Components
+  
+  * Added a conditional wireframe loader to Grid List, activated with `withLoader` (Implemented in [#33](https://github.com/travel-cloud/react-component-library/pull/33))
+  
+  ### Styles
+  
+  * Added base styles to provide layout for both custom and default styles (Implemented in [#34](https://github.com/travel-cloud/react-component-library/pull/34))
+  
 </details>
 
 ## 0.3.0 (December 4th, 2017)
