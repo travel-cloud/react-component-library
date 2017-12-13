@@ -116,7 +116,11 @@ Storybook also provides snapshot testing via Jest ensuring stability.
   + [`<UIButton />`](#uibutton-)
 * [Forms](#forms)
   + [`<UIForm.Input />`](#uiforminput-)
+  + [`<UIForm.Textarea />`](#uiformtextarea-)
   + [`<UIForm.DisabledInput />`](#uiformdisabledinput-)
+  + [`<UIForm.FormGroup />`](#uiformformgroup-)
+  + [`<UIForm.Checkbox />`](#uiformcheckbox-)
+  + [`<UIForm.Select />`](#uiformselect-)
 * [Lists](#lists)
   + [`<UIList.Simple />`](#uilistsimple-)
   + [`<UIList.Grid />`](#uilistgrid-)
@@ -218,6 +222,35 @@ Input.defaultProps = {
   helpText: null,
   value: null,
   autoComplete: 'on',
+  required: false,
+};
+```
+
+#### `<UIForm.Textarea />`
+
+Standard HTML Textarea element with a label tag and the option to include
+additional information below the input.
+
+```jsx
+<UIForm.Textarea
+  fieldName="Contact Name"
+  fieldId="contactName"
+  required
+/>
+
+Textarea.propTypes = {
+  fieldId: PropTypes.string.isRequired,
+  fieldName: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
+  helpText: PropTypes.string,
+  value: PropTypes.string,
+  required: PropTypes.bool,
+};
+
+Textarea.defaultProps = {
+  onChange: null,
+  helpText: null,
+  value: null,
   required: false,
 };
 ```
