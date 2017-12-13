@@ -8,16 +8,24 @@ limited to: Bug fixes, new components and prop changes.
     Changes that have landed in master but have not been released to NPM.
     Click to see more.
   </summary>
-  
-  ### Components
-  
-  * Added a conditional wireframe loader to Grid List, activated with `withLoader` (Implemented in [#33](https://github.com/travel-cloud/react-component-library/pull/33))
-  
-  ### Styles
-  
-  * Added base styles to provide layout for both custom and default styles (Implemented in [#34](https://github.com/travel-cloud/react-component-library/pull/34))
-  
+
 </details>
+
+## 1.1.0 (December 13th, 2017)
+
+### Components
+
+* Added `<UIForm.Textarea />` with similar attributes to `<UIForm.Input />` (Implemented in [#36](https://github.com/travel-cloud/react-component-library/pull/36))
+
+## 1.0.0 (December 6th, 2017)
+
+### Components
+
+* Added a conditional wireframe loader to Grid List, activated with `withLoader` (Implemented in [#33](https://github.com/travel-cloud/react-component-library/pull/33))
+
+### Styles
+
+* Added base styles to provide layout for both custom and default styles (Implemented in [#34](https://github.com/travel-cloud/react-component-library/pull/34))
 
 ## 0.3.0 (December 4th, 2017)
 
