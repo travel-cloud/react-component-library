@@ -11,6 +11,12 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.2.0 (December 14th, 2017)
+
+### Components
+
+* Added React router link ability in `<UIList.Grid />` (Implemented in [#38](https://github.com/travel-cloud/react-component-library/pull/38))
+
 ## 1.1.0 (December 13th, 2017)
 
 ### Components
