@@ -343,7 +343,8 @@ Simple.propTypes = {
 #### `<UIList.Grid />`
 
 Grid based list, includes both columns and rows. You can pass any data to it
-and selectively render items based on keys provided in the keyMap.
+and selectively render items based on keys provided in the keyMap. You can also generate
+a React Router Link using the value of any key as the link text.
 
 ##### Usage
 
@@ -358,12 +359,17 @@ and selectively render items based on keys provided in the keyMap.
 
 Grid.propTypes = {
   classes: PropTypes.string,
-  items: PropTypes.arrayOf(PropTypes.shape({
-    onClick: PropTypes.func,
-    key: PropTypes.string,
-    text: PropTypes.string,
-  })).isRequired,
-  keyMap: PropTypes.arrayOf(PropTypes.object),
+    items: PropTypes.arrayOf(PropTypes.shape({
+      onClick: PropTypes.func,
+      link: PropTypes.shape({
+        url: PropTypes.string,
+        key: PropTypes.string,
+      }),
+      key: PropTypes.string,
+      text: PropTypes.string,
+    })).isRequired,
+    keyMap: PropTypes.arrayOf(PropTypes.object),
+    withLoader: PropTypes.bool,
 };
 
 Grid.defaultProps = {
