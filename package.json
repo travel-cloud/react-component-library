@@ -16,7 +16,8 @@
   "license": "Apache-2.0",
   "author": "travel-cloud",
   "dependencies": {
-    "flat": "^4.0.0"
+    "flat": "^4.0.0",
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.13",
@@ -40,7 +41,6 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-router-dom": "^4.2.2",
     "history": "^4.7.2",
     "react-storybook-addon-props-combinations": "^1.0.1",
     "react-test-renderer": "^16.2.0",
