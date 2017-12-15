@@ -11,9 +11,15 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.2.2 (December 15th, 2017)
+
+### Fixes
+
+* Fixed correct location of react-router-dom dependency (Implemented in [#42](https://github.com/travel-cloud/react-component-library/pull/42))
+
 ## 1.2.1 (December 15th, 2017)
 
-### Components
+### Fixes
 
 * Fixed default value in `<UIForm.Textarea />` (Implemented in [#40](https://github.com/travel-cloud/react-component-library/pull/40))
 
