@@ -11,6 +11,12 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.2.1 (December 15th, 2017)
+
+### Components
+
+* Fixed default value in `<UIForm.Textarea />` (Implemented in [#40](https://github.com/travel-cloud/react-component-library/pull/40))
+
 ## 1.2.0 (December 14th, 2017)
 
 ### Components
