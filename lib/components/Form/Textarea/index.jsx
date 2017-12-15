@@ -14,11 +14,10 @@ const Textarea = ({
     <textarea
       id={fieldId}
       className="form-control"
+      defaultValue={value}
       onChange={onChange}
       required={required}
-    >
-      {value}
-    </textarea>
+    />
     { helpText && <span className="help-block">{helpText}</span> }
   </div>
 );
