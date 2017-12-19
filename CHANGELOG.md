@@ -11,6 +11,12 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.2.3 (December 19th, 2017)
+
+### Components
+
+* Added `searchValue` prop to `<UIForm.AutoComplete />` which highlights the search term in each list item (Implemented in [#44](https://github.com/travel-cloud/react-component-library/pull/44))
+
 ## 1.2.2 (December 15th, 2017)
 
 ### Fixes
