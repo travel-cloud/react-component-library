@@ -5,7 +5,7 @@ const AutoComplete = ({ items, onClick, searchValue }) => (
   <ul className="autocomplete">
     {
       items.map((item) => {
-        const formattedText = { __html: item.text.replace(searchValue, `<b>${searchValue}</b>`) };
+        const formattedText = { __html: item.text.replace(new RegExp(searchValue, 'ig'), `<b>${searchValue}</b>`) };
         // eslint-disable-next-line
         return <li onClick={() => onClick(item)} dangerouslySetInnerHTML={formattedText} />
       })
