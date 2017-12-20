@@ -6,6 +6,7 @@ import * as Loader from './lib/components/Loader';
 import * as List from './lib/components/List';
 import * as Form from './lib/components/Form';
 import Sidebar, { Nav, Logo } from './lib/components/Sidebar';
+import Pagination from './lib/components/Pagination';
 
 const UIComponent = Component;
 const UIButton = Button;
@@ -16,6 +17,7 @@ const UIForm = Form;
 const UISidebar = Sidebar;
 const UINav = Nav;
 const UILogo = Logo;
+const UIPagination = Pagination;
 
 export {
   UI,
@@ -28,4 +30,5 @@ export {
   UISidebar,
   UINav,
   UILogo,
+  UIPagination,
 };
