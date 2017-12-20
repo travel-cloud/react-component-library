@@ -121,6 +121,7 @@ Storybook also provides snapshot testing via Jest ensuring stability.
   + [`<UIForm.FormGroup />`](#uiformformgroup-)
   + [`<UIForm.Checkbox />`](#uiformcheckbox-)
   + [`<UIForm.Select />`](#uiformselect-)
+  + [`<UIAutoComplete />`](#uiautocomplete-)
 * [Lists](#lists)
   + [`<UIList.Simple />`](#uilistsimple-)
   + [`<UIList.Grid />`](#uilistgrid-)
@@ -130,8 +131,8 @@ Storybook also provides snapshot testing via Jest ensuring stability.
   + [`<UILoader.Skeleton />`](#uiloaderskeleton-)
 * [Messages](#messages)
   + [`<UIMessages />`](#uimessages-)
-* [Sidebar](#sidebar)
-  + [`<UISidebar />`](#uisidebar-)
+* [Pagination](#pagination)
+  + [`<UIPagination />`](#uipagination-)
 
 #### `<UI />`
 
@@ -329,6 +330,28 @@ Select.defaultProps = {
   required: false,
 };
 ```
+
+#### `<UIForm.AutoComplete />`
+
+```jsx
+<UIForm.AutoComplete
+  onClick={clickHandler}
+  items={autoCompleteDataArray}
+  searchValue={inputSearchValue}
+/>
+
+AutoComplete.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string,
+  })).isRequired,
+  searchValue: PropTypes.string,
+};
+
+AutoComplete.defaultProps = {
+  searchValue: '',
+};
+```
     
 #### `<UIList.Simple />`
 
@@ -444,12 +467,12 @@ Messages.propTypes = {
 
 ```jsx
  <UISidebar>
-    <UILogo>
-        Logo here
-    </UILogo>
-    <UINav>
-      <a href="/">Home</a>
-    </UINav>
+  <UILogo>
+      Logo here
+  </UILogo>
+  <UINav>
+    <a href="/">Home</a>
+  </UINav>
 </UISidebar>
 
 Sidebar.propTypes = {
@@ -457,5 +480,17 @@ Sidebar.propTypes = {
     PropTypes.objectOf(PropTypes.any),
     PropTypes.arrayOf(PropTypes.any),
   ]).isRequired,
+};
+```
+
+#### `<UIPagination />`
+
+```jsx
+Pagination.propTypes = {
+  currentPage: PropTypes.number.isRequired,
+  pageCount: PropTypes.number.isRequired,
+  previousPage: PropTypes.func.isRequired,
+  nextPage: PropTypes.func.isRequired,
+  goToPage: PropTypes.func.isRequired,
 };
 ```

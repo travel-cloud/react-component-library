@@ -11,6 +11,12 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.3.0 (December 20th, 2017)
+
+### Components
+
+* Added `<UIPagination />` (Implemented in [#48](https://github.com/travel-cloud/react-component-library/pull/48))
+
 ## 1.2.4 (December 20th, 2017)
 
 ### Fixes
