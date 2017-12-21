@@ -31,7 +31,7 @@ Input.propTypes = {
   fieldName: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   helpText: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   autoComplete: PropTypes.string,
   required: PropTypes.bool,
 };
