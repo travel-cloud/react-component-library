@@ -489,8 +489,6 @@ Sidebar.propTypes = {
 Pagination.propTypes = {
   currentPage: PropTypes.number.isRequired,
   pageCount: PropTypes.number.isRequired,
-  previousPage: PropTypes.func.isRequired,
-  nextPage: PropTypes.func.isRequired,
   goToPage: PropTypes.func.isRequired,
 };
 ```
