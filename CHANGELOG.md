@@ -11,6 +11,12 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.3.1 (December 20th, 2017)
+
+### Fixes
+
+* Fixed button active state in `<UIPagination />` (Implemented in [#51](https://github.com/travel-cloud/react-component-library/pull/51))
+
 ## 1.3.0 (December 20th, 2017)
 
 ### Components
