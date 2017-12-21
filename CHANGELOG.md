@@ -11,6 +11,13 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.3.2 (December 20th, 2017)
+
+### Fixes
+
+* Fixed incorrect proptypes (Implemented in [#55](https://github.com/travel-cloud/react-component-library/pull/55))
+
+
 ## 1.3.1 (December 20th, 2017)
 
 ### Fixes
