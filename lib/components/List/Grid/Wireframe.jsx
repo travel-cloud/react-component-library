@@ -10,7 +10,7 @@ const Wireframe = ({
   loader,
 }) => [
   button && <div key="wireframeButton" className="wireframe-button" />,
-  <div className="ui-wireframe">
+  <div key="wireframe" className="ui-wireframe">
     { loader && <Spinner /> }
     <ul key="wireframeList" className="list-group">
       {
