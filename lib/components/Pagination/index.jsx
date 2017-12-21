@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 const Pagination = ({
   currentPage,
   pageCount,
-  previousPage,
-  nextPage,
   goToPage,
 }) => {
+  const previousPage = () => goToPage(currentPage - 1);
+  const nextPage = () => goToPage(currentPage + 1);
+
   const pages = [];
   // eslint-disable-next-line
   for (let i = 1; i <= pageCount; i += 1) {
@@ -50,8 +51,6 @@ const Pagination = ({
 Pagination.propTypes = {
   currentPage: PropTypes.number.isRequired,
   pageCount: PropTypes.number.isRequired,
-  previousPage: PropTypes.func.isRequired,
-  nextPage: PropTypes.func.isRequired,
   goToPage: PropTypes.func.isRequired,
 };
 
