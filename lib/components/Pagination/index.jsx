@@ -14,12 +14,11 @@ const Pagination = ({
   for (let i = 1; i <= pageCount; i += 1) {
     pages.push((
       <li key={`page-${i}`}>
-        <button
-          className={i === currentPage && 'active'}
-          onClick={goToPage(i)}
-        >
-          {i}
-        </button>
+        {
+          i === currentPage
+            ? <button className="active" onClick={() => goToPage(i)}>{i}</button>
+            : <button onClick={() => goToPage(i)}>{i}</button>
+        }
       </li>
     ));
   }
