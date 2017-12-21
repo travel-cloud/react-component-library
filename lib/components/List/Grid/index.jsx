@@ -22,23 +22,23 @@ const renderLink = ({ column, flattenedItem }) => {
   const linkUrl = `${column.link.url}/${flattenedItem[linkKey]}`;
 
   return (
-      // eslint-disable-next-line
-      <Link to={linkUrl} className="text-large link">
-        {flattenedItem[column.key]}
-      </Link>
+    // eslint-disable-next-line
+    <Link to={linkUrl} className="text-large link">
+      {flattenedItem[column.key]}
+    </Link>
   );
 };
 
 const renderListColumns = ({ keyMap, item }) => {
   const flattenedItem = flatten(item);
 
-  return keyMap.map((column) => {
+  return keyMap.map((column, index) => {
     // text for the link will be rendered with the action if there is one
     const hasActions = column.onClick || column.link;
 
     return (
       <p
-        key={Math.random()}
+        key={index}
         className="pull-left"
         style={{ width: '20%', marginBottom: '15px' }}
       >
@@ -66,8 +66,8 @@ const Grid = ({
   items.length > 0 || !withLoader ?
     <ul className={`ui-grid list-group ${classes}`}>
       {
-        items.map(item => (
-          <li className="pull-left" key={item[keyMap[0].key]}>
+        items.map((item, index) => (
+          <li className="pull-left" key={index}>
             { renderListColumns({ keyMap, item }) }
           </li>
         ))
