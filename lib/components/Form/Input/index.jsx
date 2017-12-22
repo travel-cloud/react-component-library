@@ -17,7 +17,7 @@ const Input = ({
       id={fieldId}
       className="form-control"
       onChange={onChange}
-      value={value}
+      defaultValue={value}
       autoComplete={autoComplete}
       required={required}
     />

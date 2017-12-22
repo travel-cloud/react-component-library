@@ -11,6 +11,12 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.3.3 (December 21th, 2017)
+
+### Fixes
+
+* Fixed input not updating by switching value -> defaultValue (Implemented in [#57](https://github.com/travel-cloud/react-component-library/pull/57))
+
 ## 1.3.2 (December 20th, 2017)
 
 ### Fixes
