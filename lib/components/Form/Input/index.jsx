@@ -21,7 +21,7 @@ const Input = ({
       defaultValue={value}
       autoComplete={autoComplete}
       required={required}
-      readOnly={readOnly ? 'readOnly' : ''}
+      readOnly={readOnly}
     />
     { helpText && <span className="help-block">{helpText}</span> }
   </div>
