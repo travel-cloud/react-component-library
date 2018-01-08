@@ -11,6 +11,10 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.3.4 (January 4th, 2018)
+
+* Added a readOnly attribute to the Input component.
+
 ## 1.3.3 (December 21th, 2017)
 
 ### Fixes

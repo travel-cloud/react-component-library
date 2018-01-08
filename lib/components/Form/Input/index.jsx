@@ -9,6 +9,7 @@ const Input = ({
   value,
   autoComplete,
   required,
+  readOnly,
 }) => (
   <div className="form-group">
     <label htmlFor={fieldId}>{fieldName}</label>
@@ -20,6 +21,7 @@ const Input = ({
       defaultValue={value}
       autoComplete={autoComplete}
       required={required}
+      readOnly={readOnly}
     />
     { helpText && <span className="help-block">{helpText}</span> }
   </div>
@@ -34,6 +36,7 @@ Input.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   autoComplete: PropTypes.string,
   required: PropTypes.bool,
+  readOnly: PropTypes.bool,
 };
 
 // eslint-disable-next-line
@@ -43,6 +46,7 @@ Input.defaultProps = {
   value: '',
   autoComplete: 'on',
   required: false,
+  readOnly: false,
 };
 
 export default Input;
