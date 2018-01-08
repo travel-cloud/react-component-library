@@ -15,6 +15,7 @@ const Textarea = ({
       id={fieldId}
       className="form-control"
       defaultValue={value}
+      value={value}
       onChange={onChange}
       required={required}
     />

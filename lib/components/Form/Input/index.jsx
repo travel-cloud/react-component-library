@@ -19,6 +19,7 @@ const Input = ({
       className="form-control"
       onChange={onChange}
       defaultValue={value}
+      value={value}
       autoComplete={autoComplete}
       required={required}
       readOnly={readOnly}
