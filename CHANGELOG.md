@@ -11,6 +11,12 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.3.5 (January 8th, 2018)
+
+### Fixes
+
+* Fixed setting an input value post load (Implemented in [#60](https://github.com/travel-cloud/react-component-library/pull/60))
+
 ## 1.3.4 (January 4th, 2018)
 
 * Added a readOnly attribute to the Input component.
