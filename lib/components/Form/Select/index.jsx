@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 const Select = ({
   fieldId,
+  fieldName,
   name,
   options,
   onChange,
@@ -13,6 +14,7 @@ const Select = ({
     <label htmlFor={fieldId}>{name}</label>
     <select
       id={fieldId}
+      name={name}
       className="form-control"
       onChange={onChange}
       defaultValue={defaultValue}
@@ -37,7 +39,8 @@ const Select = ({
 
 // eslint-disable-next-line
 Select.propTypes = {
-  fieldId: PropTypes.string.isRequired,
+  fieldId: PropTypes.string,
+  fieldName: PropTypes.string,
   name: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string,
@@ -52,6 +55,8 @@ Select.propTypes = {
 Select.defaultProps = {
   onChange: null,
   defaultValue: '',
+  fieldName: '',
+  fieldId: '',
   required: false,
 };
 
