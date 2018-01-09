@@ -14,7 +14,7 @@ const Textarea = ({
     <label htmlFor={fieldId}>{fieldName}</label>
     <textarea
       id={fieldId}
-      name={fieldId}
+      name={name}
       className="form-control"
       defaultValue={value}
       value={value}
