@@ -14,7 +14,7 @@ const Select = ({
     <label htmlFor={fieldId}>{name}</label>
     <select
       id={fieldId}
-      name={name}
+      name={fieldName}
       className="form-control"
       onChange={onChange}
       defaultValue={defaultValue}
