@@ -17,9 +17,9 @@ const renderOnClick = ({ column, flattenedItem }) => (
 
 // eslint-disable-next-line
 const renderLink = ({ column, flattenedItem }) => {
-
-  const linkKey = column.link.key;
-  const linkUrl = `${column.link.url}/${flattenedItem[linkKey]}`;
+  const linkUrl = column.link.key
+    ? `${column.link.url}/${flattenedItem[column.link.key]}`
+    : column.link.url.replace(/{([^{]+)}/g, (match, attribute) => flattenedItem[attribute]);
 
   return (
     // eslint-disable-next-line
