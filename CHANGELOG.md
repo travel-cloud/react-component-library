@@ -11,6 +11,12 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.3.6 (January 9th, 2018)
+
+### Fixes
+
+Adding name attribute to the input component. [#61](https://github.com/travel-cloud/react-component-library/pull/62))
+
 ## 1.3.5 (January 8th, 2018)
 
 ### Fixes
