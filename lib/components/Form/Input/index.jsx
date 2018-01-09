@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const Input = ({
   fieldId,
   fieldName,
+  name,
   onChange,
   helpText,
   value,
@@ -16,6 +17,7 @@ const Input = ({
     <input
       type="text"
       id={fieldId}
+      name={name}
       className="form-control"
       onChange={onChange}
       defaultValue={value}
@@ -30,8 +32,9 @@ const Input = ({
 
 // eslint-disable-next-line
 Input.propTypes = {
-  fieldId: PropTypes.string.isRequired,
+  fieldId: PropTypes.string,
   fieldName: PropTypes.string.isRequired,
+  name: PropTypes.string,
   onChange: PropTypes.func,
   helpText: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -45,6 +48,8 @@ Input.defaultProps = {
   onChange: null,
   helpText: null,
   value: '',
+  fieldId: '',
+  name: '',
   autoComplete: 'on',
   required: false,
   readOnly: false,
