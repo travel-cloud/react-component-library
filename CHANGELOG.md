@@ -13,9 +13,13 @@ limited to: Bug fixes, new components and prop changes.
 
 ## 1.3.6 (January 9th, 2018)
 
+### Components
+
+Allow Grid link to work with URL patterns (Implemented in [#63](https://github.com/travel-cloud/react-component-library/pull/63))
+
 ### Fixes
 
-Adding name attribute to the input component. [#61](https://github.com/travel-cloud/react-component-library/pull/62))
+Adding name attribute to the input component. (Implemented in [#62](https://github.com/travel-cloud/react-component-library/pull/62))
 
 ## 1.3.5 (January 8th, 2018)
 
