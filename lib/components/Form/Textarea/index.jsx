@@ -8,11 +8,13 @@ const Textarea = ({
   helpText,
   value,
   required,
+  name,
 }) => (
   <div className="form-group">
     <label htmlFor={fieldId}>{fieldName}</label>
     <textarea
       id={fieldId}
+      name={fieldId}
       className="form-control"
       defaultValue={value}
       value={value}
@@ -25,8 +27,9 @@ const Textarea = ({
 
 // eslint-disable-next-line
 Textarea.propTypes = {
-  fieldId: PropTypes.string.isRequired,
+  fieldId: PropTypes.string,
   fieldName: PropTypes.string.isRequired,
+  name: PropTypes.string,
   onChange: PropTypes.func,
   helpText: PropTypes.string,
   value: PropTypes.string,
@@ -39,6 +42,8 @@ Textarea.defaultProps = {
   helpText: null,
   value: null,
   required: false,
+  fieldId: '',
+  name: '',
 };
 
 export default Textarea;

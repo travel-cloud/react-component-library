@@ -6,12 +6,14 @@ const Checkbox = ({
   onClick,
   checked,
   text,
+  name,
 }) => (
   <div className="checkbox">
     <label htmlFor={fieldId}>
       <input
         type="checkbox"
         id={fieldId}
+        name={name}
         className="form-control"
         onClick={onClick}
         defaultChecked={checked}
@@ -23,16 +25,19 @@ const Checkbox = ({
 
 // eslint-disable-next-line
 Checkbox.propTypes = {
-  fieldId: PropTypes.string.isRequired,
+  fieldId: PropTypes.string,
   onClick: PropTypes.func,
   checked: PropTypes.bool,
   text: PropTypes.string.isRequired,
+  name: PropTypes.string,
 };
 
 // eslint-disable-next-line
 Checkbox.defaultProps = {
   onClick: null,
   checked: false,
+  fieldId: '',
+  name: '',
 };
 
 export default Checkbox;
