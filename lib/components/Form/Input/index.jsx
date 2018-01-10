@@ -47,9 +47,9 @@ Input.propTypes = {
 Input.defaultProps = {
   onChange: null,
   helpText: null,
-  value: '',
-  fieldId: '',
-  name: '',
+  value: null,
+  fieldId: null,
+  name: null,
   autoComplete: 'on',
   required: false,
   readOnly: false,
