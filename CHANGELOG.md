@@ -11,6 +11,12 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.3.8 (January 10th, 2018)
+
+### Fixes
+
+Attributes added to Select for setting a value. (Implemented in [#70](https://github.com/travel-cloud/react-component-library/pull/70))
+
 ## 1.3.7 (January 10th, 2018)
 
 ### Fixes
