@@ -11,6 +11,12 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.3.9 (January 10th, 2018)
+
+### Fixes
+
+Adding checked attribute to Checkbox. (Implemented in [#72](https://github.com/travel-cloud/react-component-library/pull/72))
+
 ## 1.3.8 (January 10th, 2018)
 
 ### Fixes
