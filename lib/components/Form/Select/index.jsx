@@ -8,6 +8,7 @@ const Select = ({
   options,
   onChange,
   defaultValue,
+  value,
   required,
 }) => (
   <div className="form-group">
@@ -18,6 +19,7 @@ const Select = ({
       className="form-control"
       onChange={onChange}
       defaultValue={defaultValue}
+      value={value}
       required={required}
     >
       {
@@ -48,6 +50,7 @@ Select.propTypes = {
   })).isRequired,
   onChange: PropTypes.func,
   defaultValue: PropTypes.string,
+  value: PropTypes.string,
   required: PropTypes.bool,
 };
 
@@ -55,6 +58,7 @@ Select.propTypes = {
 Select.defaultProps = {
   onChange: null,
   defaultValue: '',
+  value: '',
   fieldName: '',
   fieldId: '',
   required: false,
