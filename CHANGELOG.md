@@ -11,6 +11,12 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.3.7 (January 10th, 2018)
+
+### Fixes
+
+Fixed variable mix up in `<UIForm.Select />` (Implemented in [#68](https://github.com/travel-cloud/react-component-library/pull/68))
+
 ## 1.3.6 (January 9th, 2018)
 
 ### Components

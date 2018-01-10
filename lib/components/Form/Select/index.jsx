@@ -11,10 +11,10 @@ const Select = ({
   required,
 }) => (
   <div className="form-group">
-    <label htmlFor={fieldId}>{name}</label>
+    <label htmlFor={fieldId}>{fieldName}</label>
     <select
       id={fieldId}
-      name={fieldName}
+      name={name}
       className="form-control"
       onChange={onChange}
       defaultValue={defaultValue}
