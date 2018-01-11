@@ -11,6 +11,12 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.3.11 (January 11th, 2018)
+
+### Fixes
+
+Loading Spinner now exported so it can be used externally. (Implemented in [#75](https://github.com/travel-cloud/react-component-library/pull/75))
+
 ## 1.3.10 (January 10th, 2018)
 
 ### Fixes
