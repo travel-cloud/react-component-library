@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Messages = ({ messages }) => messages.map(message => (
   <div key={Math.random()} className={`alert alert-${message.type}`} role="alert">
-    <p>{message.text}</p>
+    <p dangerouslySetInnerHTML={{ __html: message.text }} />
   </div>
 ));
 
