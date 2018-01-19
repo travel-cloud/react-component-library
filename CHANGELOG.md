@@ -11,6 +11,12 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.3.12 (January 19th, 2018)
+
+### Improvements
+
+Allow links within messages. (Implemented in [#79](https://github.com/travel-cloud/react-component-library/pull/79))
+
 ## 1.3.11 (January 11th, 2018)
 
 ### Fixes
