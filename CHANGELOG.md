@@ -15,7 +15,7 @@ limited to: Bug fixes, new components and prop changes.
 
 ### Improvements
 
-Allow links within messages. (Implemented in [#76](https://github.com/travel-cloud/react-component-library/pull/76))
+Allow links within messages. (Implemented in [#79](https://github.com/travel-cloud/react-component-library/pull/79))
 
 ## 1.3.11 (January 11th, 2018)
 
