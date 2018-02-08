@@ -11,6 +11,7 @@ const Input = ({
   autoComplete,
   required,
   readOnly,
+  customClasses,
 }) => (
   <div className="form-group">
     <label htmlFor={fieldId}>{fieldName}</label>
@@ -18,7 +19,7 @@ const Input = ({
       type="text"
       id={fieldId}
       name={name}
-      className="form-control"
+      className={customClasses ? `form-control ${customClasses}` : 'form-control'}
       onChange={onChange}
       defaultValue={value}
       value={value}
@@ -41,6 +42,7 @@ Input.propTypes = {
   autoComplete: PropTypes.string,
   required: PropTypes.bool,
   readOnly: PropTypes.bool,
+  customClasses: PropTypes.string,
 };
 
 // eslint-disable-next-line
@@ -53,6 +55,7 @@ Input.defaultProps = {
   autoComplete: 'on',
   required: false,
   readOnly: false,
+  customClasses: '',
 };
 
 export default Input;

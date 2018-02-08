@@ -10,13 +10,14 @@ const Select = ({
   defaultValue,
   value,
   required,
+  customClasses,
 }) => (
   <div className="form-group">
     <label htmlFor={fieldId}>{fieldName}</label>
     <select
       id={fieldId}
       name={name}
-      className="form-control"
+      className={customClasses ? `form-control ${customClasses}` : 'form-control'}
       onChange={onChange}
       defaultValue={defaultValue}
       value={value}
@@ -52,6 +53,7 @@ Select.propTypes = {
   defaultValue: PropTypes.string,
   value: PropTypes.string,
   required: PropTypes.bool,
+  customClasses: PropTypes.string,
 };
 
 // eslint-disable-next-line
@@ -62,6 +64,7 @@ Select.defaultProps = {
   fieldName: '',
   fieldId: '',
   required: false,
+  customClasses: '',
 };
 
 export default Select;
