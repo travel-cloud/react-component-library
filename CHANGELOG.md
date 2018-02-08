@@ -11,6 +11,13 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+
+## 1.3.13 (February 8th, 2018)
+
+### Improvements
+
+Allow custom classes on UIForm components. (Implemented in [#80](https://github.com/travel-cloud/react-component-library/pull/80))
+
 ## 1.3.12 (January 19th, 2018)
 
 ### Improvements
