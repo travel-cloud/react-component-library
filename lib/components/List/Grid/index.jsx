@@ -43,7 +43,7 @@ const renderListColumns = ({
 
     return (
       <p
-        id={id ? `${id}-${column.key}` : ''}
+        id={id ? `${id}-${column.key}` : null}
         key={`grid-li-${liIndex}-col-${index}`}
         className="pull-left"
         style={{ width: '20%', marginBottom: '15px' }}
@@ -71,7 +71,7 @@ const Grid = ({
   withLoader,
 }) => (
   items.length > 0 || !withLoader ?
-    <ul id={id} className={`ui-grid list-group ${classes}`}>
+    <ul id={id || null} className={`ui-grid list-group ${classes}`}>
       {
         items.map((item, index) => (
           <li className="pull-left" key={`grid-li-${index}`}>
