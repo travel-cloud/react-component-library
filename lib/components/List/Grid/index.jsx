@@ -29,7 +29,12 @@ const renderLink = ({ column, flattenedItem }) => {
   );
 };
 
-const renderListColumns = ({ keyMap, item, liIndex }) => {
+const renderListColumns = ({
+  id,
+  keyMap,
+  item,
+  liIndex,
+}) => {
   const flattenedItem = flatten(item);
 
   return keyMap.map((column, index) => {
@@ -38,6 +43,7 @@ const renderListColumns = ({ keyMap, item, liIndex }) => {
 
     return (
       <p
+        id={id ? `${id}-${column.key}` : null}
         key={`grid-li-${liIndex}-col-${index}`}
         className="pull-left"
         style={{ width: '20%', marginBottom: '15px' }}
@@ -58,17 +64,23 @@ const renderListColumns = ({ keyMap, item, liIndex }) => {
 };
 
 const Grid = ({
+  id,
   classes,
   items,
   keyMap,
   withLoader,
 }) => (
   items.length > 0 || !withLoader ?
-    <ul className={`ui-grid list-group ${classes}`}>
+    <ul id={id || null} className={`ui-grid list-group ${classes}`}>
       {
         items.map((item, index) => (
           <li className="pull-left" key={`grid-li-${index}`}>
-            { renderListColumns({ keyMap, item, liIndex: index }) }
+            {renderListColumns({
+              id,
+              keyMap,
+              item,
+              liIndex: index,
+            })}
           </li>
         ))
       }
@@ -77,6 +89,7 @@ const Grid = ({
 
 // eslint-disable-next-line
 Grid.propTypes = {
+  id: PropTypes.string,
   classes: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.shape({
     onClick: PropTypes.func,
@@ -93,6 +106,7 @@ Grid.propTypes = {
 
 // eslint-disable-next-line
 Grid.defaultProps = {
+  id: '',
   classes: '',
   keyMap: [],
   withLoader: false,

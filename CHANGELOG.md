@@ -12,6 +12,12 @@ limited to: Bug fixes, new components and prop changes.
 </details>
 
 
+## 1.3.14 (April 30th, 2018)
+
+### Improvements
+
+Allow an optional id to be specified on Grid components from which grid entries will derive their own id by combining it with their column key. (Implemented in [#82](https://github.com/travel-cloud/react-component-library/pull/82))
+
 ## 1.3.13 (February 8th, 2018)
 
 ### Improvements
