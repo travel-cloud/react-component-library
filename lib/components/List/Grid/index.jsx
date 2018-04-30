@@ -43,7 +43,7 @@ const renderListColumns = ({
 
     return (
       <p
-        id={`${id}-${column.key}`}
+        id={id ? `${id}-${column.key}` : ''}
         key={`grid-li-${liIndex}-col-${index}`}
         className="pull-left"
         style={{ width: '20%', marginBottom: '15px' }}
