@@ -12,11 +12,12 @@ const Input = ({
   required,
   readOnly,
   customClasses,
+  type,
 }) => (
   <div className="form-group">
     <label htmlFor={fieldId}>{fieldName}</label>
     <input
-      type="text"
+      type={type}
       id={fieldId}
       name={name}
       className={customClasses ? `form-control ${customClasses}` : 'form-control'}
@@ -43,6 +44,7 @@ Input.propTypes = {
   required: PropTypes.bool,
   readOnly: PropTypes.bool,
   customClasses: PropTypes.string,
+  type: PropTypes.string,
 };
 
 // eslint-disable-next-line
@@ -56,6 +58,7 @@ Input.defaultProps = {
   required: false,
   readOnly: false,
   customClasses: '',
+  type: 'text',
 };
 
 export default Input;

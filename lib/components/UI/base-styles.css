@@ -3,3 +3,6 @@
 
 .pull-left {
   float: left; }
+
+.link {
+  cursor: pointer; }
