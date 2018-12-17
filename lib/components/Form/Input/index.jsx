@@ -6,6 +6,7 @@ const Input = ({
   fieldName,
   name,
   onChange,
+  onBlur,
   helpText,
   value,
   autoComplete,
@@ -22,6 +23,7 @@ const Input = ({
       name={name}
       className={customClasses ? `form-control ${customClasses}` : 'form-control'}
       onChange={onChange}
+      onBlur={onBlur}
       defaultValue={value}
       value={value}
       autoComplete={autoComplete}
@@ -38,6 +40,7 @@ Input.propTypes = {
   fieldName: PropTypes.string.isRequired,
   name: PropTypes.string,
   onChange: PropTypes.func,
+  onBlur: PropTypes.func,
   helpText: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   autoComplete: PropTypes.string,
@@ -50,6 +53,7 @@ Input.propTypes = {
 // eslint-disable-next-line
 Input.defaultProps = {
   onChange: null,
+  onBlur: null,
   helpText: null,
   value: null,
   fieldId: null,
