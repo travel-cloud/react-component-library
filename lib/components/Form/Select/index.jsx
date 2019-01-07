@@ -11,6 +11,7 @@ const Select = ({
   value,
   required,
   customClasses,
+  disabled
 }) => (
   <div className="form-group">
     <label htmlFor={fieldId}>{fieldName}</label>
@@ -22,6 +23,7 @@ const Select = ({
       defaultValue={defaultValue}
       value={value}
       required={required}
+      disabled={disabled}
     >
       {
         options.map((option) => {
@@ -54,6 +56,7 @@ Select.propTypes = {
   value: PropTypes.string,
   required: PropTypes.bool,
   customClasses: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
 // eslint-disable-next-line
@@ -65,6 +68,7 @@ Select.defaultProps = {
   fieldId: '',
   required: false,
   customClasses: '',
+  disabled: false,
 };
 
 export default Select;
