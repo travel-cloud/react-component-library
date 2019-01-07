@@ -11,7 +11,7 @@ const Select = ({
   value,
   required,
   customClasses,
-  disabled
+  disabled,
 }) => (
   <div className="form-group">
     <label htmlFor={fieldId}>{fieldName}</label>

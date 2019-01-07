@@ -14,7 +14,7 @@ const Input = ({
   readOnly,
   customClasses,
   type,
-  disabled
+  disabled,
 }) => (
   <div className="form-group">
     <label htmlFor={fieldId}>{fieldName}</label>
