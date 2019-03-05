@@ -11,6 +11,11 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.6.0 (March 5th, 2019)
+
+### Improvements
+
+Allow `min` and `max` on Form.Input where type is `number`
 
 ## 1.3.14 (April 30th, 2018)
 

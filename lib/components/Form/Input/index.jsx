@@ -15,6 +15,8 @@ const Input = ({
   customClasses,
   type,
   disabled,
+  min,
+  max,
 }) => (
   <div className="form-group">
     <label htmlFor={fieldId}>{fieldName}</label>
@@ -31,6 +33,8 @@ const Input = ({
       required={required}
       readOnly={readOnly}
       disabled={disabled}
+      min={type === 'number' ? min : null}
+      max={type === 'number' ? max : null}
     />
     { helpText && <span className="help-block">{helpText}</span> }
   </div>
