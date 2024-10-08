@@ -10,6 +10,7 @@ const Textarea = ({
   required,
   name,
   customClasses,
+  minLength,
 }) => (
   <div className="form-group">
     <label htmlFor={fieldId}>{fieldName}</label>
@@ -21,6 +22,7 @@ const Textarea = ({
       value={value}
       onChange={onChange}
       required={required}
+      minLength={minLength || undefined}
     />
     { helpText && <span className="help-block">{helpText}</span> }
   </div>
@@ -36,6 +38,7 @@ Textarea.propTypes = {
   value: PropTypes.string,
   required: PropTypes.bool,
   customClasses: PropTypes.string,
+  minLength: PropTypes.number,
 };
 
 // eslint-disable-next-line
@@ -47,6 +50,7 @@ Textarea.defaultProps = {
   fieldId: '',
   name: '',
   customClasses: '',
+  minLength: null,
 };
 
 export default Textarea;

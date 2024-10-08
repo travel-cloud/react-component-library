@@ -11,6 +11,12 @@ limited to: Bug fixes, new components and prop changes.
 
 </details>
 
+## 1.7.0 (October 8th, 2024)
+
+### Improvements
+
+- Added optional `minLength` prop to `UIForm.Textarea` to support minimum character length validation without affecting other instances of the component.
+
 ## 1.6.0 (March 5th, 2019)
 
 ### Improvements
